@@ -1,0 +1,65 @@
+// NAVIGATION
+
+.nav {
+	&-content {
+		display: flex;
+	}
+	&-link {
+		display: inline-block;
+		margin-right: 32px;
+		color: rgba(255, 255, 255, .7);
+		transition: .3s;
+		&:hover {
+			color: $text-light;
+		}
+		@include mobile($bp-sm) {
+			&#{&}-active {
+				position: relative;
+				color: $text-light;
+				&:before {
+					content: '\f107';
+					position: absolute;
+					top: -80%;
+					left: 50%;
+					font-family: $font-awesome;
+					font-weight: 600;
+					transform: translate(-50%);
+					animation: nav-active 1s infinite;
+				}
+			}
+		}
+	}
+	&-item {
+		user-select: none;
+		-webkit-tap-highlight-color: transparent;
+	}
+	&-item:last-child &-link {
+		margin-right: 0;
+	}
+
+	// nav slide down
+	@include desktop($bp-sm) {
+		overflow: hidden;
+		transition: .5s;
+		&-content {
+			display: block;
+		}
+		&-link {
+			display: block;
+			margin-right: 0;
+			padding-top: 16px;
+			padding-bottom: 16px;
+			text-align: center;
+			&#{&}-active {
+				color: $text-light;
+			}
+		}
+	}
+}
+
+// Animations
+@keyframes nav-active{
+	50%{
+		transform: translate(-50%, 4px);
+	}
+}

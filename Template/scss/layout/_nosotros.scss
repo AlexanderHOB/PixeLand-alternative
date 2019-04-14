@@ -1,0 +1,14 @@
+// NOSOTROS 
+
+.nosotros {
+	height: 100vh;
+	@extend %sec-p;
+	background-color: $bg-nosotros;
+	&-wrapper{
+		@extend %container;
+	}
+	&-title {
+		@extend %title-2;
+		color: $text-light;
+	}
+}

@@ -1,0 +1,66 @@
+// PLACEHOLDERS 
+
+// container
+%container {
+	width: 100%;
+	padding-right: 15px;
+	padding-left: 15px;
+	margin-right: auto;
+	margin-left: auto;
+	@include mobile($bp-xs) {
+		max-width: 540px;
+	}
+	@include mobile($bp-sm) {
+		max-width: 720px;
+	}
+	@include mobile($bp-md) {
+		max-width: 960px;
+	}	
+	@include mobile($bp-lg) {
+		max-width: 1140px;
+	}
+	@include mobile($bp-lg-1) {
+		max-width: 1280px;
+	}
+}
+
+// secciones
+%sec-p {
+	padding-top: 70px;
+}
+%title {
+	text-align: center;
+	font-weight: 500;
+}
+%title-1 {
+	@extend %title;
+	font-size: 2.5em;
+	@include mobile($bp-xs){
+		font-size: 3em;
+	}
+	@include mobile($bp-sm){
+		font-size: 3.5em;
+	}
+	@include mobile($bp-md){
+		font-size: 4em;
+	}
+	@include mobile($bp-lg){
+		font-size: 4.5em;
+	}
+}
+%title-2 {
+	@extend %title;
+	font-size: 2em;
+	@include mobile($bp-xs){
+		font-size: 2.5em;
+	}
+	@include mobile($bp-sm){
+		font-size: 3em;
+	}
+	@include mobile($bp-md){
+		font-size: 3.5em;
+	}
+	@include mobile($bp-lg){
+		font-size: 4em;
+	}
+}

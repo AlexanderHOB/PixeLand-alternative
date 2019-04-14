@@ -1,0 +1,79 @@
+// VARIABLES
+
+// Branch Primary Colors
+$primary-1: #e3dfff;
+$primary-2: #083d77;
+$primary-3: #ce001a;
+$primary-4: #ff4c00;
+$primary-5: #181a1e;
+
+
+// Branch Secondary Colors
+$secondary-1: #012a36;
+$secondary-2: #69995d;
+$secondary-3: #396448;
+
+
+// Typographys
+$roboto: 'Roboto';
+$poppins: 'Poppins';
+$font-awesome: "Font Awesome 5 Free";
+$sans-serif: sans-serif;
+
+
+// Break-Points by Bootstrap
+$bp-xs: 576px;
+$bp-sm: 768px;
+$bp-md: 992px;
+$bp-lg: 1200px;
+
+
+// BreakPoints by Material Design
+$bp-xs-1: 320px;
+$bp-xs-2: 360px;
+$bp-xs-3: 400px;
+$bp-xs-4: 480px;
+
+$bp-sm-1: 600px;
+$bp-sm-2: 720px;
+$bp-sm-3: 840px;
+$bp-sm-4: 960px;
+
+$bp-md-1: 1024px;
+$bp-md-2: 1280px;
+
+$bp-lg-1: 1440px;
+$bp-lg-2: 1600px;
+
+$bp-xl-1: 1920px;
+
+
+// GENERAL
+$text-light: $light;
+$text-dark: $dark;
+$text-gray: $gray;
+$text-blue: $blue;
+
+
+// HEADER
+$bg-header-active: $blue-dark;
+
+
+// INICIO
+$bg-inicio: $blue;
+
+
+// NOSOTROS
+$bg-nosotros: $deep-purple;
+
+
+// SERVICIOS
+$bg-servicios: $teal;
+
+
+// CONTACTANOS
+$bg-contactanos: $green;
+
+
+// FOOTER
+$bg-footer: $dark;

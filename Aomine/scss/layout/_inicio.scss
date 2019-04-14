@@ -1,0 +1,14 @@
+// INICIO 
+
+.inicio {
+	height: 100vh;
+	@extend %sec-p;
+	background-color: $bg-inicio;
+	&-wrapper {
+		@extend %container;
+	}
+	&-title {
+		@extend %title-1;
+		color: $text-light;
+	}
+}

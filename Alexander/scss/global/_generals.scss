@@ -1,0 +1,43 @@
+// GENERAL
+
+*,
+*:before,
+*:after {
+	box-sizing: border-box;
+	scroll-behavior: smooth;
+}
+body {
+	font-family: $roboto, $sans-serif;
+	color: $text-dark;
+
+	// Scroll
+	&::-webkit-scrollbar {
+		width: 12px;
+		height: 12px;
+	}
+	&::-webkit-scrollbar-track {
+		border-radius: 50px;
+		background-color: rgba(0, 0, 0, .05);
+	}
+	&::-webkit-scrollbar-thumb {
+		border-radius: 50px;
+		background-color: rgba(0, 0, 0, .25);
+	}
+	&::-webkit-scrollbar-thumb:hover {
+		background-color: rgba(0, 0, 0, .45);
+	}
+}
+
+// Images
+img {
+	width: 100%;
+	display: block;
+}
+
+// Button & ancla
+button,
+a {
+	cursor: pointer;
+	user-select: none;
+	-webkit-tap-highlight-color: transparent;
+}

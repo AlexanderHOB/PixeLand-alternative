@@ -1,0 +1,14 @@
+// CONTACTANOS
+
+.contactanos {
+	height: 100vh;
+	@extend %sec-p;
+	background-color: $bg-contactanos;
+	&-wrapper{
+		@extend %container;
+	}
+	&-title {
+		@extend %title-2;
+		color: $text-light;
+	}
+}

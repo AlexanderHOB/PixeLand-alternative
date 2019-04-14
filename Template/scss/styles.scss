@@ -1,0 +1,35 @@
+// IMPORTS
+
+// Vendor
+
+
+// Lib
+@import 'lib/base-colors';
+@import 'lib/variables';
+@import 'priority/loading'; // Priority
+@import 'lib/mixins-media';
+@import 'lib/functions';
+@import 'lib/placeholders';
+@import 'lib/mixins';
+
+
+// Global
+@import 'global/reset';
+@import 'global/generals';
+@import 'global/class';
+
+
+// Layout
+@import 'layout/header';
+@import 'layout/nav';
+@import 'layout/inicio';
+@import 'layout/nosotros';
+@import 'layout/servicios';
+@import 'layout/contactanos';
+@import 'layout/footer';
+@import 'layout/messenger';
+
+
+// Components
+@import 'components/media';
+@import 'components/animations';

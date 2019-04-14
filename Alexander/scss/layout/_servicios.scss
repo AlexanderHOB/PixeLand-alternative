@@ -1,0 +1,14 @@
+// SERVICIOS
+
+.servicios {
+	height: 100vh;
+	@extend %sec-p;
+	background-color: $bg-servicios;
+	&-wrapper{
+		@extend %container;
+	}
+	&-title {
+		@extend %title-2;
+		color: $text-light;
+	}
+}
