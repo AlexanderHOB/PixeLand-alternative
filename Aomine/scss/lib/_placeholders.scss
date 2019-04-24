@@ -41,7 +41,7 @@
 }
 %title-1 {
 	@extend %title;
-	font-size: 4em;
+	font-size: 2em;
 	font-weight: 600;
 }
 %title-2 {
@@ -52,7 +52,7 @@
 
 // Texts
 %text {
-	font-text: $font-title;
+	font-family: $font-text;
 }
 %text-1 {
 	@extend %text;
@@ -61,10 +61,48 @@
 }
 
 //Botones
-%btn-1 {
-	background-image: $bg-primary;
+%btn {
+	display: inline-block;
 	color: $light;
-	padding: 16px 20px;
-	border-radius: 25px;
-	font-size: inherit;
+	padding: 12px 16px;
+	border-radius: 30px;
+	font-size: 1.2em;	
+}
+%btn-1 {
+	@extend %btn;
+	background-image: $bg-primary;
+}
+%btn-effect {
+	position: relative;
+	@extend %btn;
+	&,
+	&:after {
+		background-image: $bg-btn;
+		background-size: 400%;
+	}
+	&:hover {
+		animation: btn-effect 5s linear infinite;
+		&:after {
+			filter: blur(10px);
+			opacity: .6;
+			animation: btn-effect 5s linear infinite;
+		}
+	}
+	&:after {
+		content: '';
+		position: absolute;
+		top: -2px;
+		left: -2px;
+		right: -2px;
+		bottom: -2px;
+		z-index: -1;
+		border-radius: 30px;
+		opacity: 0;
+		transition: .5s;
+	}
+}
+@keyframes btn-effect {
+	100% {
+		background-position: 400%;
+	}
 }

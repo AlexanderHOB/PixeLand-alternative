@@ -1,1 +1,25 @@
 // NOSOTROS 
+
+.nosotros {
+	height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	&-wrapper {
+		@extend %container;
+	}
+	&-title {
+		@extend %title-2;
+		color: $primary-2;
+	}
+	&-content {
+		padding-top: 16px;
+		padding-bottom: 24px;
+		@extend %text-1;
+	}
+	&-btn {
+		@extend %btn-effect;
+	}
+	
+}

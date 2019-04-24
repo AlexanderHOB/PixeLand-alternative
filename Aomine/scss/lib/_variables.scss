@@ -1,7 +1,8 @@
 // VARIABLES
 
 // Branch Primary Colors
-
+$primary-1: #7c32ff;
+$primary-2: #c738d8;
 
 // Branch Secondary Colors
 
@@ -44,10 +45,13 @@ $text-light: $light;
 $text-dark: $dark;
 $text-gray: $gray;
 $text-blue: $blue;
+$link-primary: $blue;
 
+// Fonts
 $font-title: $poppins;
 $font-text: $poppins;
 
 // Background Primary
 $bg-primary: linear-gradient(to right, #8032FB 0%, #8032FB 20%, #9334F2 50%, #A035EB 82%, #D133E7 99%);
-
+$bg-secondary: linear-gradient(90deg, $primary-1 0%, $primary-2 100%);
+$bg-btn: linear-gradient(90deg, $primary-1, $primary-2, #9334F2, $primary-1);

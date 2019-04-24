@@ -1,1 +1,202 @@
 // NAV
+
+.nav {
+	@include mobile($bp-md) {
+		display: block;
+		height: 100%;
+		&-content {
+			display: flex;
+			align-items: center;
+			justify-content: space-around;
+			height: 100%;
+		}
+		&-link {
+			display: block;
+			@include mobile($bp-md) {
+				color: rgba(255, 255, 255, .6);
+				transition: color .5s;
+				&-active {
+					color: $light;
+				}
+			}
+		}
+	}
+	&-header {
+		display: none;
+	}
+	&-footer {
+		display: none;
+	}
+
+	// Sidenav
+	@include desktop($bp-md) {
+		position: fixed;
+		z-index: 92;
+		left: 0;
+		top: 0;
+		display: flex;
+		flex-direction: column;
+		width: 300px;
+		height: 100%;
+		box-shadow: 0 2px 2px 0 rgba(0, 0, 0, .14), 0 3px 1px -2px rgba(0, 0, 0, .12), 0 1px 5px 0 rgba(0, 0, 0, .2);
+		background-color: $light;
+		overflow: hidden;
+		transform: translateX(-105%);
+		will-change: transform;
+		backface-visibility: hidden;
+		&#{&}-out {
+			transform: translateX(0);
+		}
+		&-overlay {
+			position: fixed;
+			top: 0;
+			left: 0;
+			opacity: 0;
+			z-index: 91;
+			display: none;
+			width: 100%;
+			height: 100vh;
+			background-color: rgba(0, 0, 0, .5);
+		}
+		&-header {
+			display: block;
+			position: relative;
+			width: 100%;
+			min-height: 200px;
+			overflow: hidden;
+			margin-bottom: 16px;
+			&-close {
+				position: absolute;
+				z-index: 93;
+				top: 10px;
+				right: 10px;
+				background-color: transparent;
+			}
+			&-icon {
+				font-size: 24px;
+				color: $text-light;
+			}
+			&-bg {
+				position: absolute;
+				z-index: 92;
+				width: 100%;
+				height: 100%;
+				// background-image: url('../img/sidenav.png');
+				background-color: #000;
+				background-size: cover;
+				background-position: center;
+				filter: brightness(.4);
+			}
+			&-avatar {
+				position: absolute;
+				z-index: 93;
+				left: 15px;
+				bottom: 20px;
+				color: $text-light;
+				&-img {
+					width: 64px;
+					height: 64px;
+					border-radius: 50%;
+					// background-image: url('../img/logo.jpg');
+					background-color: #fff;
+					background-size: cover;
+					background-position: center;
+					overflow: hidden;
+				}
+				&-branch {
+					margin-top: 20px;
+					margin-bottom: 10px;
+					font-weight: 500;
+				}
+				&-email {
+					font-weight: 300;
+					&-icon {
+						transform: translateY(1px);
+					}
+				}
+			}
+		}
+		&-content {
+			display: block;
+			overflow-y: auto;
+			&::-webkit-scrollbar {
+				width: 10px;
+				height: 10px;
+			}
+			&::-webkit-scrollbar-thumb {
+				border-radius: 8px;
+				background-color: rgba(0, 0, 0, .1);
+			}
+		}
+		&-link {
+			display: block;
+			margin: 0;
+			padding: 16px 0 16px 50px;
+			font-size: 18px;
+			color: $text-dark;
+			&:hover {
+				color: $text-dark;
+			}
+			&:before {
+				content: '\f015';
+				position: absolute;
+				font-family: $font-awesome;
+				font-weight: 600;
+				top: 48%;
+				transform: translate(-35px, -50%);
+			}
+			&#{&}-active {
+				color: $link-primary;
+			}
+		}
+		&-item:nth-child(2) &-link:before {
+			content: '\f0c0';
+		}
+		&-item:nth-child(3) &-link:before {
+			content: '\f06d';
+		}
+		&-item:nth-child(4) &-link:before {
+			content: '\f1d8';
+		}
+		&-footer {
+			display: block;
+			text-align: center;
+			margin-top: auto;
+			padding-top: 10px;
+			padding-bottom: 10px;
+			&-nf {
+				color: $link-primary;
+			}
+		}
+	}
+}
+
+.drag-target {
+	display: none;
+	@include desktop($bp-md) {
+		display: block;
+		position: fixed;
+		top: 0;
+		left: 0;
+		z-index: 90;
+		height: 100vh;
+		width: 15px;
+		background-color: rgba(0, 0, 0, .005);
+	}
+}
+
+.logo {
+	display: none;
+	@include mobile($bp-md) {
+		display: block;
+		&-item {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+		&-img {
+			width: 80px;
+			transform: translateY(15px);
+		}
+	}
+}

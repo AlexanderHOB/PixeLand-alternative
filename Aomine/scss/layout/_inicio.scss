@@ -1,1 +1,62 @@
 // INICIO 
+
+.inicio {
+	position: relative;
+	height: 100vh;
+	background-image: $bg-primary;
+	&-wrapper {
+		@extend %container;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		height: 100%;
+	}
+	&-box {
+		width: 500px;
+	}
+}
+
+// Primary Content
+.primaryContent {
+	color: $text-light;
+	&-title {
+		margin-bottom: 8px;
+		text-transform: uppercase;
+		@extend %title-1;
+	}
+	&-container {
+		display: flex;
+		flex-direction: column;
+	}
+	&-text {
+		@extend %text-1;
+	}
+	&-logo {
+		color: $yellow;
+	}
+	&-slogan {
+		align-self: flex-end;
+		font-style: italic;
+	}
+}
+
+// Developing
+.developing {
+	perspective: 800px;
+	&-img {
+		transform: rotateY(-20deg);
+		transform-style: preserve-3d;
+		transition: transform .5s;
+		&:hover {
+			transform: rotateY(-10deg);
+		}
+	}
+}
+
+// Waves Background
+.waveBg {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+}

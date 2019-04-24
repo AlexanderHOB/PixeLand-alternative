@@ -5,7 +5,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
 	<meta name="author" content="NibbleFrame, nibbleframe247@gmail.com">
-	<meta name="description" content="PixeLand | NibbleFrame | NibbleFrame">
+	<meta name="description" content="PixeLand | NibbleFrame">
 	<meta name="language" content="es">
 
 	<title>PixeLand | NibbleFrame</title>
@@ -40,13 +40,77 @@
 	</div>
 
 	<!-- HEADER -->
-	<header class="header"></header>
+	<header class="header">
+		<div class="header-wrapper">
+			<div class="header-responsive">
+				<button class="nav-toggle waves" data-target="sidenav">
+					<i class="fas fa-stream nav-toggle-icon"></i>
+				</button>
+				<a href="#inicio" class="brand"><img src="assets/img/nixe-hands-up.png" alt="Nixe-chan" class="brand-img"></a>
+			</div>	
+
+			<!-- NAV -->
+			<nav id="sidenav" class="nav sidenav">
+				<div class="nav-header">
+					<button class="nav-header-close waves">
+						<i class="fas fa-times nav-header-icon"></i>
+					</button>
+					<div class="nav-header-bg"></div>
+					<div class="nav-header-avatar">
+						<div class="nav-header-avatar-img"></div>
+						<p class="nav-header-avatar-branch">PixeLand</p>
+						<p class="nav-header-avatar-email"><i class="fas fa-envelope nav-header-avatar-email-icon"></i> pixeland@gmail.com</p>
+					</div>
+				</div>
+				<ul class="nav-content">
+					<li class="nav-item"><a href="#inicio" data-spy="inicio" class="nav-link nav-link-active">Inicio</a></li>
+					<li class="nav-item"><a href="#nosotros" data-spy="nosotros" class="nav-link">Nosotros</a></li>
+					<li class="nav-item"><a href="#!" data-spy="servicios" class="nav-link">Servicos</a></li>
+					<li class="nav-item"><a href="#!" data-spy="pagos" class="nav-link">Pagos</a></li>
+					<li class="logo"><a href="#!" class="logo-link"><img src="assets/img/nixe-hands-up.png" alt="Nixe-chan" class="logo-img"></a></li>
+					<li class="nav-item"><a href="#!" data-spy="portafolio" class="nav-link">Portafoilio</a></li>
+					<li class="nav-item"><a href="#!" data-spy="clientes" class="nav-link">Clientes</a></li>
+					<li class="nav-item"><a href="#!" data-spy="blog" class="nav-link">Blog</a></li>
+					<li class="nav-item"><a href="#!" data-spy="contactanos" class="nav-link">Contactanos</a></li>
+				</ul>
+				<div class="nav-footer">
+					<p><i class="fas fa-pen-nib"></i> Design by <a href="https://nibbleframe.com" target="_blank" class="nav-footer-nf">NibbleFrame</a></p>
+				</div>
+			</nav>
+		</div>
+	</header>
 
 	<!-- INICIO -->
-	<section id="inicio" class="inicio"></section>
+	<section id="inicio" class="inicio">
+		<div class="inicio-wrapper">
+			<div class="inicio-box">
+				<div class="primaryContent">
+					<h1 class="primaryContent-title">Rompe tus fronteras</h1>
+					<div class="primaryContent-container">
+						<p class="primaryContent-text">En <span class="primaryContent-logo">PixeLand</span> te ayudamos a innovar y hacer crecer tu <span class="primaryContent-effect">marca</span> brindandote precencia tanto en la web como en las redes sociales.</p>
+						<span class="primaryContent-slogan">Atrevete a innovar~</span>
+					</div>
+				</div>
+			</div>
+			<div class="inicio-box">
+				<div class="developing">
+					<img src="assets/img/development.png" alt="developing a page" class="developing-img">
+				</div>
+			</div>
+		</div>
+		<div class="waveBg">
+			<img src="assets/img/waves.png" alt="waves" class="waveBg-img">
+		</div>
+	</section>
 
 	<!-- NOSOTROS -->
-	<section id="nosotros" class="nosotros"></section>
+	<section id="nosotros" class="nosotros">
+		<div class="nosotros-wrapper">
+			<h2 class="nosotros-title">Nosotros</h2>
+			<p class="nosotros-content">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias, nostrum perspiciatis soluta, nesciunt illo perferendis? Quae repellendus quas accusamus nihil iste ea repellat, ipsum sapiente corrupti nobis, beatae aperiam eveniet.</p>
+			<a href="#!" class="nosotros-btn">Conocenos</a>
+		</div>
+	</section>
 
 	<!-- SERVICIOS -->
 	<section id="servicios" class="servicios"></section>
@@ -77,6 +141,7 @@
 	<script src="assets/js/material.js"></script>
 	<script src="assets/js/nProgress.js"></script>
 	<script src="assets/js/loader.js"></script>
+	<script src="assets/js/scrollspy.js"></script>
 	<script src="assets/js/main.js"></script>
 </body>
 </html>
