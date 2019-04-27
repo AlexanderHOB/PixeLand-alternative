@@ -985,7 +985,7 @@ a {
   -webkit-transform: rotate(10deg);
   -ms-transform: rotate(10deg);
   transform: rotate(10deg);
-  opacity: .1;
+  opacity: .09;
 }
 
 .inicio-item:nth-child(6) img {
