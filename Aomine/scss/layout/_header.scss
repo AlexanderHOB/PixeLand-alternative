@@ -7,7 +7,12 @@
 	z-index: 90;
 	width: 100%;
 	height: 60px;
-	background-image: $bg-primary;
+	background-image: $bg-secondary;
+	transition: .5s;
+	&-active {
+		box-shadow: 0 0 12px 8px rgba(0, 0, 0, .2);
+		box-shadow: 0 6px 28px 0 rgba(24, 52, 117, .2);
+	}
 	&-wrapper {
 		@extend %container;
 		height: 100%;

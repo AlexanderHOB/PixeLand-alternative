@@ -41,8 +41,11 @@
 }
 %title-1 {
 	@extend %title;
-	font-size: 2em;
+	font-size: 1.5em;
 	font-weight: 600;
+	@include mobile($bp-sm){
+		font-size: 2em;
+	}
 }
 %title-2 {
 	@extend %title;
@@ -75,33 +78,17 @@
 %btn-effect {
 	position: relative;
 	@extend %btn;
-	&,
-	&:after {
-		background-image: $bg-btn;
-		background-size: 400%;
-	}
+	background-image: $bg-btn;
+	background-size: 400%;
 	&:hover {
 		animation: btn-effect 5s linear infinite;
-		&:after {
-			filter: blur(10px);
-			opacity: .6;
-			animation: btn-effect 5s linear infinite;
-		}
-	}
-	&:after {
-		content: '';
-		position: absolute;
-		top: -2px;
-		left: -2px;
-		right: -2px;
-		bottom: -2px;
-		z-index: -1;
-		border-radius: 30px;
-		opacity: 0;
-		transition: .5s;
+		box-shadow: 0 0 20px rgba(124, 50, 255, .8);
 	}
 }
 @keyframes btn-effect {
+	0% {
+		background-position: 0%;
+	}
 	100% {
 		background-position: 400%;
 	}

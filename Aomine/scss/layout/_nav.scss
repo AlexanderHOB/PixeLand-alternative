@@ -18,6 +18,9 @@
 				&-active {
 					color: $light;
 				}
+				&:hover {
+					color: $light;
+				}
 			}
 		}
 	}
@@ -97,9 +100,10 @@
 					width: 64px;
 					height: 64px;
 					border-radius: 50%;
-					// background-image: url('../img/logo.jpg');
+					background-image: url('../img/Nixe-up.png');
 					background-color: #fff;
-					background-size: cover;
+					background-size: 90%;
+					background-repeat: no-repeat;
 					background-position: center;
 					overflow: hidden;
 				}
@@ -142,7 +146,7 @@
 				position: absolute;
 				font-family: $font-awesome;
 				font-weight: 600;
-				top: 48%;
+				top: 50%;
 				transform: translate(-35px, -50%);
 			}
 			&#{&}-active {
@@ -156,6 +160,21 @@
 			content: '\f06d';
 		}
 		&-item:nth-child(4) &-link:before {
+			content: '\f291';
+		}
+		&-item:nth-child(5) &-link:before {
+			content: '';
+		}
+		&-item:nth-child(6) &-link:before {
+			content: '\f07b';
+		}
+		&-item:nth-child(7) &-link:before {
+			content: '\f4fb';
+		}
+		&-item:nth-child(8) &-link:before {
+			content: '\f305';
+		}
+		&-item:nth-child(9) &-link:before {
 			content: '\f1d8';
 		}
 		&-footer {

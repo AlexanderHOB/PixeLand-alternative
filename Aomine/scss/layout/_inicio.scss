@@ -2,8 +2,11 @@
 
 .inicio {
 	position: relative;
+	z-index: 70;
+	width: 100%;
 	height: 100vh;
-	background-image: $bg-primary;
+	overflow: hidden;
+	background-image: $bg-secondary;
 	&-wrapper {
 		@extend %container;
 		display: flex;
@@ -11,8 +14,89 @@
 		justify-content: space-between;
 		height: 100%;
 	}
-	&-box {
-		width: 500px;
+	&-box {	
+		@include desktop($bp-md){
+			text-align: center;
+			&:nth-child(2) {
+				display: none;
+			}
+		}
+		@include mobile($bp-md){
+			width: 500px;
+		}
+	}
+	// &-wave {
+	// 	&-svg {
+	// 		position: absolute;
+	// 		bottom: 0;
+	// 		right: 0;
+	// 		z-index: 71;
+	// 	}
+	// 	&-path {
+	// 		fill: #fff;
+	// 	}
+	// }
+	&-wave {
+		position: absolute;
+		bottom: 0;
+		right: 0;
+		z-index: 71;
+		width: 101%;
+		height: 232px;
+		background-image: url(../img/wave.svg);
+		background-size: cover;
+		background-repeat: repeat-x;
+		background-position: right;
+	}
+	&-nixe {
+		display: none;
+		@include desktop($bp-md) {
+			position: absolute;
+			bottom: 20px;
+			right: 25px;
+			z-index: 72;
+			display: block;
+		}
+	}
+	&-items {
+		position: absolute;
+		top: 0;
+		z-index: -1;
+		width: 100%;
+		height: 100vh;
+	}
+	&-item {
+		position: absolute;
+	}
+	&-item:nth-child(1) {
+		top: 8%;
+		left: 10%;
+		transform: rotate(-5deg);
+		opacity: .2;
+		img {
+			width: 40%;
+		}
+	}
+	&-item:nth-child(2) {
+		top: 25%;
+		left: 40%;
+		transform: rotate(5deg);
+		opacity: .3;
+		img {
+			width: 60%;
+		}
+	}
+	&-item:nth-child(3) {
+		top: 55%;
+		right: -8%;
+		transform: rotate(3deg);
+		opacity: .5;
+		img {
+			width: 40%;
+		}
+		@include desktop($bp-md){
+			display: none;
+		} 	
 	}
 }
 
@@ -35,13 +119,18 @@
 		color: $yellow;
 	}
 	&-slogan {
-		align-self: flex-end;
 		font-style: italic;
+		@include mobile($bp-md){
+			align-self: flex-end;
+		}
 	}
 }
 
 // Developing
 .developing {
+	position: relative;
+	z-index: 73;
+	display: block;
 	perspective: 800px;
 	&-img {
 		transform: rotateY(-20deg);
@@ -51,12 +140,4 @@
 			transform: rotateY(-10deg);
 		}
 	}
-}
-
-// Waves Background
-.waveBg {
-	position: absolute;
-	bottom: 0;
-	left: 0;
-	width: 100%;
 }
