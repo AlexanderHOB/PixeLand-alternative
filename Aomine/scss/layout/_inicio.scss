@@ -58,99 +58,134 @@
 		position: absolute;
 	}
 	&-item:nth-child(1) {
-		top: 15%;
-		left: -5%;
+		top: 10%;
+		left: -15%;
 		transform: rotate(-5deg);
-		opacity: .2;
+		opacity: .15;
 		img {
 			width: 100%;
 		}
+		@include mobile($bp-xs){
+			top: 10%;
+			left: -10%;
+		} 
+		@include mobile($bp-sm){
+			top: 10%;
+			left: -5%;
+		} 
+		@include mobile($bp-md){
+			top: 15%;
+			left: -5%;
+		} 
 	}
 	&-item:nth-child(2) {
-		top: 35%;
-		left: 25%;
+		top: 40%;
+		left: 30%;
 		transform: rotate(5deg);
 		opacity: .15;
 		img {
 			width: 100%;
 		}
+		@include desktop($bp-md){
+			left: 50%;
+		} 	
 	}
 	&-item:nth-child(3) {
-		top: 65%;
-		left: 2%;
+		top: 75%;
+		left: 5%;
 		transform: rotate(20deg);
 		opacity: .15;
 		img {
 			width: 80%;
+		}
+		@include mobile($bp-sm){
+			top: 80%;
+			left: 30%;
+		}
+		@include mobile($bp-sm-3){
+			left: 42%;
+		}
+		@include mobile($bp-md){
+			top: 65%;
+			left: 2%;
 		}
 	}
 	&-item:nth-child(4) {
 		top: 20%;
 		left: 45%;
 		transform: rotate(10deg);
-		opacity: .3;
+		opacity: .1;
 		img {
 			width: 60%;
 		}
-		@include desktop($bp-md){
+		@include desktop($bp-sm){
 			display: none;
 		} 	
 	}
 	&-item:nth-child(5) {
-		top: 20%;
-		right: 0%;
-		transform: rotate(6deg);
-		opacity: .2;
+		top: 18%;
+		left: 60%;
+		transform: translate(45px) rotate(30deg);
+		opacity: .1;
 		img {
-			width: 60%;
+			width: 50%;
 		}
-		@include desktop($bp-md){
-			display: none;
+		@include mobile($bp-xs){
+			top: 20%;
+			left: 80%;
+			transform: rotate(45deg);
+			img {
+				width: 70%;
+			}
 		} 	
+		@include mobile($bp-md){
+			top: 20%;
+			left: 20%;
+		}
 	}
 	&-item:nth-child(6) {
 		top: 55%;
-		right: -8%;
-		transform: rotate(3deg);
-		opacity: .5;
+		right: -1%;
+		transform: rotate(10deg);
+		opacity: .1;
 		img {
-			width: 40%;
+			width: 60%;
 		}
-		@include desktop($bp-md){
+		@include desktop($bp-sm){
 			display: none;
 		} 	
 	}
 	&-item:nth-child(7) {
-		top: 53%;
-		right: -8%;
-		transform: rotate(3deg);
-		opacity: .5;
+		top: 12%;
+		right: 7%;
+		transform: rotate(-30deg);
+		opacity: .08;
 		img {
-			width: 40%;
+			width: 60%;
 		}
 		@include desktop($bp-md){
 			display: none;
 		} 	
 	}
 	&-item:nth-child(8) {
-		top: 55%;
-		right: -8%;
-		transform: rotate(3deg);
-		opacity: .5;
+		top: 88%;
+		right: 20%;
+		transform: rotate(-10deg);
+		opacity: .15;
 		img {
-			width: 40%;
+			width: 100%;
 		}
 		@include desktop($bp-md){
 			display: none;
 		} 	
 	}
 	&-item:nth-child(9) {
-		top: 55%;
-		right: -8%;
-		transform: rotate(3deg);
-		opacity: .5;
+		top: 45%;
+		left: 50%;
+		transform: rotate(-20deg);
+		opacity: .05;
 		img {
-			width: 40%;
+			width: 70%;
 		}
 		@include desktop($bp-md){
 			display: none;
