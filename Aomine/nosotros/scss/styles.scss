@@ -1,0 +1,19 @@
+// IMPORTS
+
+// Lib
+@import '../../scss/lib/base-colors';
+@import '../../scss/lib/variables';
+@import '../../scss/priority/loader'; // Priority
+@import '../../scss/lib/mixins-media';
+@import '../../scss/lib/functions';
+@import '../../scss/lib/placeholders';
+@import '../../scss/lib/mixins';
+
+
+// Global
+@import '../../scss/global/reset';
+@import '../../scss/global/generals';
+@import '../../scss/global/class';
+
+// Layout
+@import 'layout/nosotros';

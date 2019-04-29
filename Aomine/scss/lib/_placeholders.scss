@@ -49,8 +49,11 @@
 }
 %title-2 {
 	@extend %title;
-	font-size: 3em;
+	font-size: 2.5em;
 	font-weight: 500;
+	@include mobile($bp-sm){
+		font-size: 3em;
+	}
 }
 
 // Texts
@@ -61,6 +64,14 @@
 	@extend %text;
 	font-size: 1.2em;
 	font-weight: 400;
+}
+%text-2 {
+	@extend %text;
+	font-size: 1.15em;
+	font-weight: 400;
+	@include mobile($bp-sm){
+		font-size: 1.2em;
+	}
 }
 
 //Botones

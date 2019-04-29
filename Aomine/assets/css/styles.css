@@ -216,17 +216,34 @@ a {
 }
 
 .nosotros-title {
-  font-size: 3em;
+  font-size: 2.5em;
   font-weight: 500;
+}
+
+@media only screen and (min-width: 768px) {
+  .nosotros-title {
+    font-size: 3em;
+  }
 }
 
 .primaryContent-text, .nosotros-content {
   font-family: "Poppins";
 }
 
-.primaryContent-text, .nosotros-content {
+.primaryContent-text {
   font-size: 1.2em;
   font-weight: 400;
+}
+
+.nosotros-content {
+  font-size: 1.15em;
+  font-weight: 400;
+}
+
+@media only screen and (min-width: 768px) {
+  .nosotros-content {
+    font-size: 1.2em;
+  }
 }
 
 .nosotros-btn {
@@ -627,7 +644,7 @@ a {
     width: 64px;
     height: 64px;
     border-radius: 50%;
-    background-image: url("../img/Nixe-up.png");
+    background-image: url("../img/nixe/Nixe-up.png");
     background-color: #fff;
     background-size: 90%;
     background-repeat: no-repeat;
@@ -804,15 +821,21 @@ a {
 
 .inicio-wave {
   position: absolute;
-  bottom: 0;
-  right: 0;
+  bottom: -.5px;
+  right: -.5px;
   z-index: 71;
   width: 101%;
-  height: 232px;
-  background-image: url(../img/wave2.svg);
+  height: 224px;
+  background-image: url(../img/inicio/wave.svg);
   background-size: cover;
   background-repeat: repeat-x;
-  background-position: right;
+  background-position: bottom right;
+}
+
+@media only screen and (min-width: 1400px) {
+  .inicio-wave {
+    background-size: contain;
+  }
 }
 
 .inicio-nixe {
@@ -847,7 +870,7 @@ a {
   -webkit-transform: rotate(-5deg);
   -ms-transform: rotate(-5deg);
   transform: rotate(-5deg);
-  opacity: .15;
+  opacity: .12;
 }
 
 .inicio-item:nth-child(1) img {
@@ -881,7 +904,7 @@ a {
   -webkit-transform: rotate(5deg);
   -ms-transform: rotate(5deg);
   transform: rotate(5deg);
-  opacity: .15;
+  opacity: .08;
 }
 
 .inicio-item:nth-child(2) img {
@@ -900,7 +923,7 @@ a {
   -webkit-transform: rotate(20deg);
   -ms-transform: rotate(20deg);
   transform: rotate(20deg);
-  opacity: .15;
+  opacity: .13;
 }
 
 .inicio-item:nth-child(3) img {
@@ -933,7 +956,7 @@ a {
   -webkit-transform: rotate(10deg);
   -ms-transform: rotate(10deg);
   transform: rotate(10deg);
-  opacity: .1;
+  opacity: .09;
 }
 
 .inicio-item:nth-child(4) img {
@@ -952,7 +975,7 @@ a {
   -webkit-transform: translate(45px) rotate(30deg);
   -ms-transform: translate(45px) rotate(30deg);
   transform: translate(45px) rotate(30deg);
-  opacity: .1;
+  opacity: .08;
 }
 
 .inicio-item:nth-child(5) img {
@@ -985,7 +1008,7 @@ a {
   -webkit-transform: rotate(10deg);
   -ms-transform: rotate(10deg);
   transform: rotate(10deg);
-  opacity: .09;
+  opacity: .1;
 }
 
 .inicio-item:nth-child(6) img {
@@ -1042,7 +1065,7 @@ a {
   -webkit-transform: rotate(-20deg);
   -ms-transform: rotate(-20deg);
   transform: rotate(-20deg);
-  opacity: .05;
+  opacity: .06;
 }
 
 .inicio-item:nth-child(9) img {
@@ -1098,8 +1121,8 @@ a {
 }
 
 .developing-img {
-  -webkit-transform: rotateY(-20deg);
-  transform: rotateY(-20deg);
+  -webkit-transform: rotateY(-30deg);
+  transform: rotateY(-30deg);
   -webkit-transform-style: preserve-3d;
   transform-style: preserve-3d;
   -webkit-transition: -webkit-transform .5s;

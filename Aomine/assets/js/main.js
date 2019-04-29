@@ -26,10 +26,19 @@ const header = new Header({
 	header: '.header',
 	active: 'header-active',
 	nixe: '.logo-img',
-	nixeImg1: 'assets/img/nixe-hands-up.png',
-	nixeImg2: 'assets/img/Nixe-cartel.png'
+	nixeImg1: 'assets/img/nixe/nixe-hands-up.png',
+	nixeImg2: 'assets/img/nixe/Nixe-cartel.png'
 });
 
+// Typewriter
+const typewriter = new Typewriter({
+	id: '#typewriter',
+	text: [
+	'marca',
+	'empresa',
+	'idea'
+	]
+});
 
 // ON LOAD
 window.addEventListener('load', function(){
@@ -39,6 +48,9 @@ window.addEventListener('load', function(){
 
 	// Scrollspy
 	scrollspy.ini();
+
+	// Typewriter
+	typewriter.init();
 });
 
 // ON SCROLL

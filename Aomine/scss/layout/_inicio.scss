@@ -27,15 +27,18 @@
 	}
 	&-wave {
 		position: absolute;
-		bottom: 0;
-		right: 0;
+		bottom: -.5px;
+		right: -.5px;
 		z-index: 71;
 		width: 101%;
-		height: 232px;
-		background-image: url(../img/wave2.svg);
+		height: 224px;
+		background-image: url(../img/inicio/wave.svg);
 		background-size: cover;
 		background-repeat: repeat-x;
-		background-position: right;
+		background-position: bottom right;
+		@include mobile(1400px) {
+			background-size: contain;
+		}
 	}
 	&-nixe {
 		display: none;
@@ -61,7 +64,7 @@
 		top: 10%;
 		left: -15%;
 		transform: rotate(-5deg);
-		opacity: .15;
+		opacity: .12;
 		img {
 			width: 100%;
 		}
@@ -82,7 +85,7 @@
 		top: 40%;
 		left: 30%;
 		transform: rotate(5deg);
-		opacity: .15;
+		opacity: .08;
 		img {
 			width: 100%;
 		}
@@ -94,7 +97,7 @@
 		top: 75%;
 		left: 5%;
 		transform: rotate(20deg);
-		opacity: .15;
+		opacity: .13;
 		img {
 			width: 80%;
 		}
@@ -114,7 +117,7 @@
 		top: 20%;
 		left: 45%;
 		transform: rotate(10deg);
-		opacity: .1;
+		opacity: .09;
 		img {
 			width: 60%;
 		}
@@ -126,7 +129,7 @@
 		top: 18%;
 		left: 60%;
 		transform: translate(45px) rotate(30deg);
-		opacity: .1;
+		opacity: .08;
 		img {
 			width: 50%;
 		}
@@ -147,7 +150,7 @@
 		top: 55%;
 		right: -1%;
 		transform: rotate(10deg);
-		opacity: .09;
+		opacity: .1;
 		img {
 			width: 60%;
 		}
@@ -183,7 +186,7 @@
 		top: 45%;
 		left: 50%;
 		transform: rotate(-20deg);
-		opacity: .05;
+		opacity: .06;
 		img {
 			width: 70%;
 		}
@@ -226,7 +229,7 @@
 	display: block;
 	perspective: 800px;
 	&-img {
-		transform: rotateY(-20deg);
+		transform: rotateY(-30deg);
 		transform-style: preserve-3d;
 		transition: transform .5s;
 		&:hover {
