@@ -153,6 +153,44 @@
   transform: rotate(3deg) translate(0px, -4px);
 }
 
+.services-wrap {
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+@media only screen and (min-width: 576px) {
+  .services-wrap {
+    max-width: 540px;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .services-wrap {
+    max-width: 720px;
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  .services-wrap {
+    max-width: 960px;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .services-wrap {
+    max-width: 1140px;
+  }
+}
+
+@media only screen and (min-width: 1440px) {
+  .services-wrap {
+    max-width: 1280px;
+  }
+}
+
 button,
 a {
   -webkit-user-select: none;
@@ -296,4 +334,170 @@ a {
 
 .waves .waves-ripple {
   z-index: -1;
+}
+
+.services {
+  background: -webkit-gradient(linear, left top, right top, from(#8032FB), color-stop(20%, #8032FB), color-stop(50%, #9334F2), color-stop(82%, #A035EB), color-stop(99%, #D133E7));
+  background: -webkit-linear-gradient(left, #8032FB 0%, #8032FB 20%, #9334F2 50%, #A035EB 82%, #D133E7 99%);
+  background: -o-linear-gradient(left, #8032FB 0%, #8032FB 20%, #9334F2 50%, #A035EB 82%, #D133E7 99%);
+  background: linear-gradient(to right, #8032FB 0%, #8032FB 20%, #9334F2 50%, #A035EB 82%, #D133E7 99%);
+  position: relative;
+  padding: 200px 0;
+}
+
+.services-title {
+  text-align: center;
+  color: #ddd;
+  text-transform: uppercase;
+  font-size: 30px;
+  position: relative;
+  padding-bottom: 10px;
+}
+
+.services-title:before {
+  content: '';
+  position: absolute;
+  display: block;
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  width: 0;
+  height: 1px;
+  background: #fff;
+  -webkit-transition: 0.5s ease;
+  -o-transition: 0.5s ease;
+  transition: 0.5s ease;
+}
+
+.services-title:hover:before {
+  width: 50%;
+  height: 2px;
+  left: 25%;
+}
+
+.services-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+.service-box {
+  width: 30.33%;
+  padding: 10px;
+  text-align: center;
+  color: #ddd;
+  position: relative;
+  cursor: pointer;
+}
+
+.service-box:hover .service-icon {
+  background: #F9F8F8;
+  color: #9334F2;
+}
+
+.service-box:hover .service-description {
+  visibility: visible;
+  z-index: 2;
+  opacity: 1;
+  -webkit-transform: translateX(0) translateY(105%);
+  -ms-transform: translateX(0) translateY(105%);
+  transform: translateX(0) translateY(105%);
+}
+
+@media only screen and (max-width: 959px) {
+  .service-box {
+    width: 45%;
+  }
+}
+
+@media only screen and (max-width: 719px) {
+  .service-box {
+    width: 50%;
+  }
+}
+
+@media only screen and (max-width: 479px) {
+  .service-box {
+    width: 100%;
+  }
+}
+
+.service-icon {
+  display: inline-block;
+  width: 70px;
+  height: 70px;
+  border: 3px solid #F9F8F8;
+  color: #F9F8F8;
+  border-radius: 50%;
+  margin-bottom: 30px;
+  margin-top: 16px;
+  -webkit-transition: .5s ease;
+  -o-transition: .5s ease;
+  transition: .5s ease;
+}
+
+.service-icon i {
+  line-height: 70px;
+  font-size: 26px;
+}
+
+.service-title {
+  font-size: 18px;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+
+.service-description {
+  font-size: 14px;
+  position: absolute;
+  left: 0px;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  background-color: #222222;
+  padding: 20px;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  border-radius: 4px;
+  visibility: hidden;
+  opacity: 0;
+  -webkit-transition: .5s;
+  -o-transition: .5s;
+  transition: .5s;
+}
+
+.service-description:before {
+  content: '';
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  background-color: #222222;
+  top: -15px;
+  left: 47%;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+.service-background-top {
+  background-image: url(../img/services/service-background-top.svg);
+  top: 0;
+}
+
+.service-background-bottom {
+  background-image: url(../img/services/service-background-bottom.svg);
+  bottom: 0;
+}
+
+.service-background-top, .service-background-bottom {
+  background-size: cover;
+  position: absolute;
+  background-repeat: repeat-x;
+  width: 100%;
+  height: 200px;
 }
