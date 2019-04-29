@@ -41,10 +41,16 @@
 }
 %title-1 {
 	@extend %title;
-	font-size: 1.5em;
+	font-size: 2em;
 	font-weight: 600;
+	@include mobile($bp-xs){
+		font-size: 2.5em;
+	}
 	@include mobile($bp-sm){
-		font-size: 2em;
+		font-size: 3em;
+	}
+	@include mobile($bp-md){
+		font-size: 2.5em;
 	}
 }
 %title-2 {
@@ -52,7 +58,7 @@
 	font-size: 2.5em;
 	font-weight: 500;
 	@include mobile($bp-sm){
-		font-size: 3em;
+		font-size: 4em;
 	}
 }
 
@@ -91,6 +97,7 @@
 	@extend %btn;
 	background-image: $bg-btn;
 	background-size: 400%;
+	transition: .5s;
 	&:hover {
 		animation: btn-effect 5s linear infinite;
 		box-shadow: 0 0 20px rgba(124, 50, 255, .8);

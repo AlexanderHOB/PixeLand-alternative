@@ -205,13 +205,25 @@ a {
 }
 
 .primaryContent-title {
-  font-size: 1.5em;
+  font-size: 2em;
   font-weight: 600;
+}
+
+@media only screen and (min-width: 576px) {
+  .primaryContent-title {
+    font-size: 2.5em;
+  }
 }
 
 @media only screen and (min-width: 768px) {
   .primaryContent-title {
-    font-size: 2em;
+    font-size: 3em;
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  .primaryContent-title {
+    font-size: 2.5em;
   }
 }
 
@@ -222,7 +234,7 @@ a {
 
 @media only screen and (min-width: 768px) {
   .nosotros-title {
-    font-size: 3em;
+    font-size: 4em;
   }
 }
 
@@ -261,6 +273,9 @@ a {
   background-image: -o-linear-gradient(left, #7c32ff, #c738d8, #9334F2, #7c32ff);
   background-image: linear-gradient(90deg, #7c32ff, #c738d8, #9334F2, #7c32ff);
   background-size: 400%;
+  -webkit-transition: .5s;
+  -o-transition: .5s;
+  transition: .5s;
 }
 
 .nosotros-btn:hover {
@@ -835,6 +850,7 @@ a {
 @media only screen and (min-width: 1400px) {
   .inicio-wave {
     background-size: contain;
+    background-position: bottom left;
   }
 }
 
@@ -1097,7 +1113,11 @@ a {
   flex-direction: column;
 }
 
-.primaryContent-logo {
+.primaryContent-branch {
+  font-weight: 600;
+}
+
+.primaryContent-effect {
   color: #ffeb3b;
 }
 
@@ -1133,8 +1153,8 @@ a {
 }
 
 .developing-img:hover {
-  -webkit-transform: rotateY(-10deg);
-  transform: rotateY(-10deg);
+  -webkit-transform: rotateY(-15deg);
+  transform: rotateY(-15deg);
 }
 
 .nosotros {

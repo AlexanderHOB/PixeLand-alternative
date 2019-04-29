@@ -38,6 +38,7 @@
 		background-position: bottom right;
 		@include mobile(1400px) {
 			background-size: contain;
+			background-position: bottom left;
 		}
 	}
 	&-nixe {
@@ -211,7 +212,10 @@
 	&-text {
 		@extend %text-1;
 	}
-	&-logo {
+	&-branch {
+		font-weight: 600;	
+	}
+	&-effect {
 		color: $yellow;
 	}
 	&-slogan {
@@ -233,7 +237,7 @@
 		transform-style: preserve-3d;
 		transition: transform .5s;
 		&:hover {
-			transform: rotateY(-10deg);
+			transform: rotateY(-15deg);
 		}
 	}
 }

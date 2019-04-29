@@ -13,7 +13,7 @@ class Typewriter {
 	init(){
 		setTimeout(()=>{
 			this.requestTwo = setInterval(() => this.loopTwo(--this.count), 60);
-		}, (((this.max - 1) * 60)  + 60) + 5000);
+		}, (((this.max - 1) * 60)  + 60) + 3000);
 	}
 
 	loopOne(count){
@@ -24,7 +24,7 @@ class Typewriter {
 			this.count = this.text.length;
 			setTimeout(()=>{
 				this.requestTwo = setInterval(() => this.loopTwo(--this.count), 60);
-			}, (((this.max - 1) * 60)  + 60) + 5000);
+			}, (((this.max - 1) * 60)  + 60) + 3000);
 		}
 	}
 
