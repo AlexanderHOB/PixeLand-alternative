@@ -1,1 +1,14 @@
 // PORTAFOLIO
+
+.portafolio {
+
+
+
+	@extend %sec-p;
+	height: 100vh;
+	&-title {
+		@extend %title-2;
+		color: $primary-1;
+		text-align: center;
+	}
+}

@@ -11,12 +11,17 @@
 			height: 100%;
 		}
 		&-link {
+			position: relative;
 			display: block;
 			@include mobile($bp-md) {
 				color: rgba(255, 255, 255, .6);
 				transition: color .5s;
 				&-active {
 					color: $light;
+					.nav-destroy {
+						visibility: visible;
+						opacity: 1;
+					}
 				}
 				&:hover {
 					color: $light;
@@ -84,8 +89,7 @@
 				z-index: 92;
 				width: 100%;
 				height: 100%;
-				// background-image: url('../img/sidenav.png');
-				background-color: #000;
+				background-color: $light;
 				background-size: cover;
 				background-position: center;
 				filter: brightness(.4);
@@ -101,7 +105,6 @@
 					height: 64px;
 					border-radius: 50%;
 					background-image: url('../img/nixe/Nixe-up.png');
-					background-color: #fff;
 					background-size: 90%;
 					background-repeat: no-repeat;
 					background-position: center;
@@ -138,9 +141,6 @@
 			padding: 16px 0 16px 50px;
 			font-size: 18px;
 			color: $text-dark;
-			&:hover {
-				color: $text-dark;
-			}
 			&:before {
 				content: '\f015';
 				position: absolute;
@@ -187,6 +187,32 @@
 				color: $link-primary;
 			}
 		}
+	}
+	&-destroy {
+		@include mobile($bp-md){
+			position: absolute;
+			z-index: -1;
+			top: 0;
+			left: 47.35%;
+			transform: translate(-50%, -50%);
+			width: 17px;
+			height: 20px;
+			background-image: url('../img/sprites/destroy.png');
+			background-size: cover;
+			animation: destroy 1.2s steps(7) infinite;
+			visibility: hidden;
+			opacity: 0;
+			transition: .5s;	
+		}
+	}
+}
+
+@keyframes destroy {
+	from {
+		background-position: 0px;
+	}
+	to {
+		background-position: -1600px;
 	}
 }
 
