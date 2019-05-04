@@ -19,10 +19,16 @@
         @extend %text-2;
     }
     &-form {
+        
         padding:35px;
         display: grid;
         grid-gap: 25px;
         grid-template-columns: repeat(3,1fr);
+        @include desktop($bp-xs){
+            width: 100%;
+            display: flex;
+            flex-flow: wrap column;
+        }
         &-group {
             &:nth-of-type(4){
                 grid-column: span 4;
