@@ -1,1 +1,76 @@
-// CONTACTANOS
+// CONTACTANOS// CONTACTANOS
+.contactanos-wrap{
+    @extend %container;
+    display: flex;
+    align-items: center;
+    flex-flow: wrap column;
+}
+.contactanos{
+    @extend %sec-p;
+    &-title{
+        @extend %title-2;
+        font-size: 30px;
+        text-align: center;
+        & h5{
+            font-size: 0.6em;
+        
+        }
+    }
+    &-form{
+    padding:35px;
+    display: grid;
+    grid-gap: 25px;
+    grid-template-columns: repeat(3,1fr);
+    
+        &-group{
+            &:nth-of-type(4){
+                grid-column: span 4;
+            }
+            width: 100%;
+            margin-bottom:20px;
+            position: relative;
+            & label{
+                color:#ABABAB;
+                position: absolute;
+                top:0;
+                left:0;
+                padding: 10px 0;
+                font-size: 16px;
+                font-weight: 400;
+                text-transform: uppercase;
+                transition: all .4s;
+                cursor: text;
+                pointer-events: none;
+            }     
+            & input{
+                background: none;
+                outline: none;
+                border: none;
+                display: block;
+                padding: 10px 0;
+                width: 100%;
+                border-bottom: 1.2px solid #818A91;
+                color: #444;
+                font-size: 16px;
+            &:focus ~ label, &:valid ~ label{
+                top:-18px;
+                left:0;
+                font-size: 12px;
+                color:$primary-1;
+            }
+            &:focus{
+                border-bottom: 1.2px solid $primary-1;
+
+            }  
+        }
+        }
+        &-submit{
+            grid-column-start: 2;
+            & input{
+                @extend %btn-effect-pix;
+                border:none;
+                width: 100%;
+            }
+        }
+    }
+}

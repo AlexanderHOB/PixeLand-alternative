@@ -1,1 +1,145 @@
 // PAGOS
+.pagos-wrap{
+    @extend %container;
+
+}
+.pagos{
+    @extend %sec-p;
+    &-title{
+        @extend %title-2;
+        text-align: center;
+        font-size: 36px;
+    }
+    &-content{
+    display: grid;
+    justify-content: center;
+    grid-template-columns: repeat(1,1fr);
+    grid-gap: 30px;
+    margin-top:25px;
+    @include  range($bp-sm,$bp-md){
+        grid-template-columns: repeat(4,1fr);
+        grid-template-areas: "emprendedor emprendedor profesional profesional"
+                             ". experto experto .";
+        grid-auto-columns: 1fr;
+    }
+    @include  mobile($bp-md){
+        grid-template-columns: repeat(3,1fr) ;
+    }
+    }
+}
+.pago-content{
+    font-family: $poppins;
+    display: flex;
+    flex-flow: wrap column;
+    justify-content: space-between;
+    box-sizing: border-box;
+    text-align: center;
+    width: 100%;
+    box-shadow: 0 6px 20px 0 rgba(24, 52, 117, .3);
+    border-radius: 25px;
+    &:nth-of-type(1){
+        @include  range($bp-sm,$bp-md){
+            grid-area: emprendedor;
+        }
+        }
+       
+    &:nth-of-type(2){
+        @include  range($bp-sm,$bp-md){
+            grid-area: profesional;
+        }
+    }
+    &:nth-of-type(3){
+        @include  range($bp-sm,$bp-md){
+            grid-area: experto;
+        }
+    }
+    &-title{
+        padding: 60px 40px;
+        color:#fff;
+        background: linear-gradient(45deg,#212121,#323232);
+        border-bottom-left-radius: 50%;
+        border-bottom-right-radius: 50%;
+        border-top-right-radius: 25px;
+        border-top-left-radius: 25px;
+
+        & h4{
+            text-transform: uppercase;
+            font-size: 20px;
+            font-weight: 700;
+        }
+        & h5{
+            font-size: 25px;
+        }
+        & .badge{
+            @extend %badge;
+            background-color: $green;
+            border-radius: 5px;
+        }
+    }
+    &-features{
+        & ul{
+            padding: 15px 10px;
+            font-size: 14px;
+            text-transform: uppercase;
+            & li{
+                padding: 6px 0;
+                cursor: pointer;
+                transition: .5s;
+                border-left: 10px solid transparent;
+                border-right: 10px solid transparent;
+                &:hover{
+                    border-left: 15px solid #5121f3;
+                    border-right: 15px solid #5121f3;
+                }
+            }
+        }
+    }
+    &-button{
+
+        & a{
+            @extend %btn-effect-pix;
+            &:before{
+                content:'';
+                position: absolute;
+                top:-5px;
+                left: -15px;
+                right: -15px;
+                bottom: -5px;
+                transition: .5s;
+                z-index: -1;
+		        border-radius: 40px;
+		        background: linear-gradient(90deg,#8032FB,#9334F2,#A035EB,#D133E7);
+		        background-size: 400%;
+		        opacity: 0;
+            }
+            &:hover{
+                animation: btnColor 1s linear infinite;
+                &:before{
+                    filter: blur(20px);
+                    opacity: 1;
+                    animation: btnColor 5s linear infinite;
+                }
+            }
+            
+
+        }
+
+    }
+}
+//badge
+
+%badge{
+    padding: 7px 10px 3px;
+    font-size: 16px;
+    font-weight: bold;
+    white-space: nowrap;
+    color: #ffffff;
+}
+
+@keyframes btnColor{
+    from{
+        background-position: 0%;
+    }to{
+        background-position: 200%;
+    }
+}

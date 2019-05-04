@@ -68,3 +68,10 @@
 	border-radius: 25px;
 	font-size: inherit;
 }
+%btn-effect-pix{
+    @extend %btn-1;
+    background: linear-gradient(90deg,#D133E7,#8032FB,#A035EB,#D133E7);
+    position: relative;
+    animation: btnColor 1s linear infinite;
+    background-size: 200%;
+}
