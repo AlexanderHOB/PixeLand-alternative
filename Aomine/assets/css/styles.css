@@ -1915,6 +1915,10 @@ a {
   }
 }
 
+.contactanos {
+  position: relative;
+}
+
 @media only screen and (max-width: 1199px) {
   .contactanos {
     padding-top: 100px;
@@ -1932,6 +1936,61 @@ a {
   -webkit-box-direction: normal;
   -ms-flex-flow: wrap column;
   flex-flow: wrap column;
+}
+
+.contactanos-image-nux {
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  right: 10%;
+  bottom: 10%;
+  -webkit-filter: grayscale(100%);
+  filter: grayscale(100%);
+  opacity: .5;
+  background-image: url(../img/contactanos/cartero.png);
+}
+
+.contactanos-image-message-1 {
+  right: 10%;
+  bottom: 10%;
+  -webkit-transform: rotate(-15deg);
+  -ms-transform: rotate(-15deg);
+  transform: rotate(-15deg);
+  -webkit-filter: grayscale(100%);
+  filter: grayscale(100%);
+  opacity: .5;
+  -webkit-animation: contactanos-message 5s linear alternate infinite;
+  animation: contactanos-message 5s linear alternate infinite;
+}
+
+@-webkit-keyframes contactanos-message {
+  from {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  50% {
+    -webkit-transform: rotate(-40deg);
+    transform: rotate(-40deg);
+  }
+  to {
+    -webkit-transform: rotate(40deg);
+    transform: rotate(40deg);
+  }
+}
+
+@keyframes contactanos-message {
+  from {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  50% {
+    -webkit-transform: rotate(-40deg);
+    transform: rotate(-40deg);
+  }
+  to {
+    -webkit-transform: rotate(40deg);
+    transform: rotate(40deg);
+  }
 }
 
 .contactanos-title {
@@ -2000,7 +2059,7 @@ a {
   padding-top: 10px;
   padding-bottom: 10px;
   width: 100%;
-  color: #212121;
+  color: #000;
   font-size: 16px;
   border-bottom: 1.2px solid #bdbdbd;
 }
@@ -2030,4 +2089,11 @@ a {
   text-align: center;
   -ms-grid-column: 2;
   grid-column-start: 2;
+}
+
+.contactanos-image-message-1 {
+  background-image: url(../img/contactanos/carta.png);
+  width: 60px;
+  height: 40px;
+  position: absolute;
 }

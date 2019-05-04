@@ -1,6 +1,8 @@
 // CONTACTANOS// CONTACTANOS
 
 .contactanos {
+    position: relative;
+    
     @extend %layout-center;
     @include desktop($bp-lg){
         padding-top: 100px; 
@@ -11,6 +13,41 @@
         align-items: center;
         flex-flow: wrap column;
     }
+    &-image-nux{
+        position: absolute;
+        width:200px;
+        height: 200px;
+        right:10%;
+        bottom: 10%;
+        filter:grayscale(100%);
+        opacity: .5;
+        background-image: url(../img/contactanos/cartero.png);
+    }
+    &-image-message{
+        &-1{
+            @extend %contactanos-image-message;
+            right:10%;
+            bottom: 10%;
+            transform: rotate(-15deg);
+            filter:grayscale(100%);
+            opacity: .5;
+            animation: contactanos-message 5s linear alternate infinite;
+        }
+        @keyframes contactanos-message{
+            from{
+                transform: rotate(0deg);
+            }
+            50%{
+                transform: rotate(-40deg);
+
+            }
+            to{
+                transform: rotate(40deg);
+            }
+        }
+        
+    }
+
     &-title {
         @extend %title-2;
         color: $primary-1;
@@ -58,7 +95,7 @@
                 padding-top: 10px;
                 padding-bottom: 10px;
                 width: 100%;
-                color: $dark;
+                color: #000;
                 font-size: 16px;
                 border-bottom: 1.2px solid $divider;
                 &:focus ~ label, &:valid ~ label {
@@ -88,4 +125,11 @@
             }
         }
     }
+}
+//placeholder
+%contactanos-image-message{
+    background-image: url(../img/contactanos/carta.png);
+    width: 60px;
+    height: 40px;
+    position: absolute;
 }
