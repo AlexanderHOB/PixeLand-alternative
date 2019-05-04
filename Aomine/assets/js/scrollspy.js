@@ -1,7 +1,6 @@
 // Scrollspy
 
 class Scrollspy {
-
 	sections = [];
 
 	constructor(object) {
@@ -10,7 +9,7 @@ class Scrollspy {
 		this.active = object.active;
 	}
 
-	ini() {
+	init() {
 		this.headerH = this.header.offsetHeight;
 		this.section.forEach((e) => {
 			this.sections[e.id] = e.offsetTop;

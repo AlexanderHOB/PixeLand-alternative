@@ -48,10 +48,22 @@ $text-blue: $blue;
 $link-primary: $primary-1;
 
 // Fonts
-$font-title: $poppins;
+// $font-title: 'Just Another Hand';
+// $font-title: 'Kalam';
+// $font-title: 'Gochi Hand';
+
+// $font-title: 'Baloo';
+// $font-title: 'Itim';
+
+// $font-title: 'Sriracha';
+
+// $font-title: 'Baloo Bhaijaan';
+// $font-title: 'Happy Monkey';
+$font-title: 'Kosugi Maru';
+
 $font-text: $poppins;
 
 // Background Primary
 $bg-primary: linear-gradient(to right, #8032FB 0%, #8032FB 20%, #9334F2 50%, #A035EB 82%, #D133E7 99%);
-$bg-secondary: linear-gradient(90deg, $primary-1 0%, $primary-2 100%);
+$bg-secondary: linear-gradient(45deg, $primary-1 0%, $primary-2 100%);
 $bg-btn: linear-gradient(90deg, $primary-1, $primary-2, #9334F2, $primary-1);

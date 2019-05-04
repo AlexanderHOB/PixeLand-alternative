@@ -38,6 +38,7 @@
 // Titles
 %title {
 	font-family: $font-title;
+	text-transform: uppercase;
 }
 %title-1 {
 	@extend %title;
@@ -97,10 +98,11 @@
 	@extend %btn;
 	background-image: $bg-btn;
 	background-size: 400%;
+	box-shadow: 0 4px 20px 0 rgba(24, 52, 117, .2);
 	transition: .5s;
 	&:hover {
 		animation: btn-effect 5s linear infinite;
-		box-shadow: 0 0 20px rgba(124, 50, 255, .8);
+		box-shadow: 0 4px 20px 0 rgba(24, 52, 117, .5);
 	}
 }
 @keyframes btn-effect {

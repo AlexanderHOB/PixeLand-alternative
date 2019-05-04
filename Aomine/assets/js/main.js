@@ -45,6 +45,21 @@ const typewriter = new Typewriter({
 	]
 });
 
+// portafolio-slider
+const portafolioSlider = new FadeSlider({
+	sliderImg: '.slider-img',
+	nextItem: '.slider-arrow-next',
+	previousItem: '.slider-arrow-previous',
+	interval: 5000,
+	sliderActive: 'slider-active'
+});
+
+// Blog
+const blogLeerMas = new Blog({
+	blogPostText: '.blog-post-text',
+	btnLeerMas: '.btn-leer-mas'
+});
+
 // ON LOAD
 window.addEventListener('load', function(){
 	// Loader
@@ -52,7 +67,7 @@ window.addEventListener('load', function(){
 	NProgress.done();
 
 	// Scrollspy
-	scrollspy.ini();
+	scrollspy.init();
 
 	// Typewriter
 	typewriter.init();
@@ -73,54 +88,70 @@ window.addEventListener('scroll', function(){
 // ON RESIZE
 window.addEventListener('resize', function(){
 	// Scrollspy
-	scrollspy.ini();
+	scrollspy.init();
 });
 
 //DOM LOADED
-// window.addEventListener('DOMContentLoaded', function(){});
+window.addEventListener('DOMContentLoaded', function(){
+	// portafolio-slider
+	portafolioSlider.init();
 
-// Media Queries
-	// Media Queries General
-	const sidenavMQ = e => {
-		var instances;
-		if (e.matches) {
-			// Sidenav
-			$nav.style.transform = 'translateX(-105%)';
-			instances = M.Sidenav.init($nav);
-			for(let i of $navItems){
-				i.classList.add('waves');
-			}
-		}else{
-			// Sidenav
-			$body.style.overflow = '';
-			$nav.style.transform = 'translateX(0px)';
-			for(let i of $navItems){
-				i.classList.remove('waves');
-			}
+	// BLog Leer más
+	blogLeerMas.init(scrollspy);
+});
+
+// MEDIA QUERIES
+// MQ Header
+const headerMQ = e => {
+	if (e.matches) {
+		loader.start();
+	}else{
+		loader.start();
+	}
+}
+
+$desktopBpMd.addListener(headerMQ);
+headerMQ($desktopBpMd);
+
+// MQ Sidenav
+const sidenavMQ = e => {
+	var instances;
+	if (e.matches) {
+		$nav.style.transform = 'translateX(-105%)';
+		instances = M.Sidenav.init($nav);
+		for(let i of $navItems){
+			i.classList.add('waves');
+		}
+	}else{
+		$body.style.overflow = '';
+		$nav.style.transform = 'translateX(0px)';
+		for(let i of $navItems){
+			i.classList.remove('waves');
 		}
 	}
+}
 
-	$desktopBpMd.addListener(sidenavMQ);
-	sidenavMQ($desktopBpMd);
+$desktopBpMd.addListener(sidenavMQ);
+sidenavMQ($desktopBpMd);
 
-	// Media Queries Nixe
-	const nixeMQ = e => {
-		if (e.matches) {
-			nixe.changeValues({
-				nixe: '.nixe-responsive',
-				nixeImg1: 'assets/img/nixe/Nixe-up.png',
-				nixeImg2: 'assets/img/nixe/Nixe.png'
-			});
-		}else{
-			nixe.changeValues({
-				nixe: '.logo-img',
-				nixeImg1: 'assets/img/nixe/nixe-hands-up.png',
-				nixeImg2: 'assets/img/nixe/Nixe-cartel.png'
-			});
-		}
+// MQ Nixe
+const nixeMQ = e => {
+	if (e.matches) {
+		nixe.changeValues({
+			nixe: '.nixe-responsive',
+			nixeImg1: 'assets/img/nixe/Nixe-responsive-up.png',
+			nixeImg2: 'assets/img/nixe/Nixe-responsive.png'
+		});
+	}else{
+		nixe.changeValues({
+			nixe: '.logo-img',
+			nixeImg1: 'assets/img/nixe/nixe-hands-up.png',
+			nixeImg2: 'assets/img/nixe/Nixe-cartel.png'
+		});
 	}
+}
 
-	$desktopBpMd.addListener(nixeMQ);
-	nixeMQ($desktopBpMd);
+$desktopBpMd.addListener(nixeMQ);
+nixeMQ($desktopBpMd);
 
 
