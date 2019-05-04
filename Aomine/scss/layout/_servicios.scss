@@ -17,31 +17,29 @@
 		&:before {
 			content: '';
 			position: absolute;
-			left: 50%;
+			left: 0;
 			bottom: 0;
-			width: 0;
+			width: 100%;
 			height: 2px;
 			background-color: $light;
+			transform: scaleX(0);
 			transition: 0.5s;
 		}
 		&:hover:before {
-			width: 50%;
-			left: 25%
+			transform: scaleX(.5);
 		}
 	}
-
 	&-text {
 		@extend %text-2;
 		color: $light;
-		
 	}
-	
 	&-container {
 		display: flex;
 		flex-wrap: wrap;
 		justify-content: center;
 	}
 }
+
 .service {
 	&-box {
 		position: relative;
@@ -50,13 +48,13 @@
 		color: $light;
 		cursor: pointer;
 		text-align: center;
+		@extend %tap-highlight;
 		&:hover {
 			& .service-icon {
 				background-color: $light;
 				color: $primary-3;
 			}
 			& .service-description {
-				z-index: 51;
 				visibility: visible;
 				opacity: 1;
 				transform: translateY(100%);
@@ -88,13 +86,15 @@
 		}
 	}
 	&-title {
+		margin-bottom: 10px;
 		font-size: 18px;
 		text-transform: uppercase;
-		margin-bottom: 10px;
+		font-family: $font-primary;
 	}
 	&-description {
 		font-size: 14px;
 		position: absolute;
+		z-index: 51;
 		left: 0;
 		top: 0;
 		bottom: 0;

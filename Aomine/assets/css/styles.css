@@ -205,7 +205,7 @@
 }
 
 button,
-a {
+a, .service-box {
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
@@ -217,35 +217,22 @@ a {
   padding-top: 100px;
 }
 
-.primaryContent-title, .nosotros-title, .services-title, .planes-title, .portafolio-title, .clientes-title, .blog-title, .contactanos-title {
-  font-family: "Kosugi Maru";
-  text-transform: uppercase;
-}
-
 .primaryContent-title {
-  font-size: 2em;
+  font-family: "Itim";
+  text-transform: uppercase;
+  font-size: 2.5em;
   font-weight: 600;
 }
 
-@media only screen and (min-width: 576px) {
-  .primaryContent-title {
-    font-size: 2.5em;
-  }
-}
-
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 768px) and (max-width: 991px) {
   .primaryContent-title {
     font-size: 3em;
   }
 }
 
-@media only screen and (min-width: 992px) {
-  .primaryContent-title {
-    font-size: 2.5em;
-  }
-}
-
 .nosotros-title, .services-title, .planes-title, .portafolio-title, .clientes-title, .blog-title, .contactanos-title {
+  font-family: "Sriracha";
+  text-transform: uppercase;
   font-size: 2.5em;
   font-weight: 500;
   text-align: center;
@@ -253,7 +240,7 @@ a {
 
 @media only screen and (min-width: 768px) {
   .nosotros-title, .services-title, .planes-title, .portafolio-title, .clientes-title, .blog-title, .contactanos-title {
-    font-size: 3.5em;
+    font-size: 3em;
   }
 }
 
@@ -283,9 +270,15 @@ a {
 .nosotros-btn, .plan-content-button a, .blog-post-btn, .contactanos-form-submit button {
   display: inline-block;
   color: #ffffff;
-  padding: 12px 16px;
+  padding: 12px 24px;
   border-radius: 30px;
   font-size: 1.2em;
+}
+
+@media only screen and (max-width: 767px) {
+  .nosotros-btn, .plan-content-button a, .blog-post-btn, .contactanos-form-submit button {
+    padding: 12px 16px;
+  }
 }
 
 .nosotros-btn, .plan-content-button a, .blog-post-btn, .contactanos-form-submit button {
@@ -338,7 +331,7 @@ a {
 .plan-content-title .badge {
   padding: 7px 10px 3px;
   font-size: 16px;
-  font-weight: bold;
+  font-weight: 700;
   white-space: nowrap;
   color: #ffffff;
 }
@@ -792,13 +785,13 @@ a {
     content: '\f06d';
   }
   .nav-item:nth-child(4) .nav-link:before {
-    content: '\f291';
+    content: '\f135';
   }
   .nav-item:nth-child(5) .nav-link:before {
     content: '';
   }
   .nav-item:nth-child(6) .nav-link:before {
-    content: '\f07b';
+    content: '\f07c';
   }
   .nav-item:nth-child(7) .nav-link:before {
     content: '\f4fb';
@@ -1319,19 +1312,23 @@ a {
 .services-title:before {
   content: '';
   position: absolute;
-  left: 50%;
+  left: 0;
   bottom: 0;
-  width: 0;
+  width: 100%;
   height: 2px;
   background-color: #ffffff;
+  -webkit-transform: scaleX(0);
+  -ms-transform: scaleX(0);
+  transform: scaleX(0);
   -webkit-transition: 0.5s;
   -o-transition: 0.5s;
   transition: 0.5s;
 }
 
 .services-title:hover:before {
-  width: 50%;
-  left: 25%;
+  -webkit-transform: scaleX(0.5);
+  -ms-transform: scaleX(0.5);
+  transform: scaleX(0.5);
 }
 
 .services-text {
@@ -1364,7 +1361,6 @@ a {
 }
 
 .service-box:hover .service-description {
-  z-index: 51;
   visibility: visible;
   opacity: 1;
   -webkit-transform: translateY(100%);
@@ -1410,14 +1406,16 @@ a {
 }
 
 .service-title {
+  margin-bottom: 10px;
   font-size: 18px;
   text-transform: uppercase;
-  margin-bottom: 10px;
+  font-family: "Itim";
 }
 
 .service-description {
   font-size: 14px;
   position: absolute;
+  z-index: 51;
   left: 0;
   top: 0;
   bottom: 0;
@@ -1504,8 +1502,8 @@ a {
   justify-content: space-between;
   text-align: center;
   width: 100%;
-  -webkit-box-shadow: 0 5px 28px rgba(51, 51, 51, 0.2);
-  box-shadow: 0 5px 28px rgba(51, 51, 51, 0.2);
+  -webkit-box-shadow: 0 4px 28px rgba(51, 51, 51, 0.1);
+  box-shadow: 0 4px 28px rgba(51, 51, 51, 0.1);
   border-radius: 20px;
   overflow: hidden;
   padding-bottom: 24px;
@@ -1555,14 +1553,16 @@ a {
   border-bottom-right-radius: 50%;
 }
 
-.plan-content-title h4 {
+.plan-content-title h3 {
+  padding-bottom: 8px;
+  font-family: "Itim";
   text-transform: uppercase;
-  font-size: 20px;
+  font-size: 24px;
   font-weight: 700;
 }
 
-.plan-content-title h5 {
-  font-size: 25px;
+.plan-content-title h4 {
+  font-size: 20px;
 }
 
 .plan-content-title .badge {
@@ -1670,7 +1670,7 @@ a {
 
 .slider-arrow-icon {
   display: block;
-  color: #7c32ff;
+  color: #212121;
   font-size: 32px;
   -webkit-transform: translateX(0px);
   -ms-transform: translateX(0px);
@@ -1832,8 +1832,8 @@ a {
 .blog-post {
   background-color: #ffffff;
   margin-top: 50px;
-  -webkit-box-shadow: 0 5px 28px rgba(51, 51, 51, 0.2);
-  box-shadow: 0 5px 28px rgba(51, 51, 51, 0.2);
+  -webkit-box-shadow: 0 4px 28px rgba(51, 51, 51, 0.1);
+  box-shadow: 0 4px 28px rgba(51, 51, 51, 0.1);
   border-radius: 20px;
   overflow: hidden;
 }
@@ -1932,8 +1932,15 @@ a {
   color: #7c32ff;
 }
 
+@media only screen and (max-width: 767px) {
+  .contactanos-title {
+    font-size: 2em;
+  }
+}
+
 .contactanos-form {
-  padding: 35px;
+  width: 80%;
+  margin-top: 35px;
   display: -ms-grid;
   display: grid;
   grid-gap: 25px;
@@ -1956,7 +1963,7 @@ a {
 
 .contactanos-form-group {
   width: 100%;
-  margin-bottom: 20px;
+  margin-bottom: 24px;
   position: relative;
 }
 
@@ -1972,11 +1979,9 @@ a {
   left: 0;
   padding: 10px 0;
   font-size: 18px;
-  font-weight: 400;
-  text-transform: uppercase;
-  -webkit-transition: all .4s;
-  -o-transition: all .4s;
-  transition: all .4s;
+  -webkit-transition: .4s;
+  -o-transition: .4s;
+  transition: .4s;
   cursor: text;
   pointer-events: none;
 }
@@ -1986,27 +1991,33 @@ a {
   outline: none;
   border: none;
   display: block;
-  padding: 10px 0;
+  padding-top: 10px;
+  padding-bottom: 10px;
   width: 100%;
-  border-bottom: 1.2px solid #bdbdbd;
   color: #212121;
   font-size: 16px;
+  border-bottom: 1.2px solid #bdbdbd;
 }
 
 .contactanos-form-group input:focus ~ label, .contactanos-form-group input:valid ~ label {
-  top: -18px;
-  left: 0;
+  top: -24px;
   font-size: 14px;
   color: #7c32ff;
 }
 
-.contactanos-form-group input:focus {
+.contactanos-form-group input:focus, .contactanos-form-group input:valid {
   border-bottom: 1.2px solid #7c32ff;
 }
 
 .contactanos-form-group input[type=number]::-webkit-inner-spin-button,
 .contactanos-form-group input[type=number]::-webkit-outer-spin-button {
   -webkit-appearance: none;
+}
+
+@media only screen and (min-width: 576px) {
+  .contactanos-form-group:nth-child(4) {
+    padding-right: 25px;
+  }
 }
 
 .contactanos-form-submit {

@@ -14,13 +14,16 @@
     &-title {
         @extend %title-2;
         color: $primary-1;
+        @include desktop($bp-sm){
+            font-size: 2em;
+        }
     }
     &-text {
         @extend %text-2;
     }
     &-form {
-        
-        padding:35px;
+        width: 80%;
+        margin-top: 35px;
         display: grid;
         grid-gap: 25px;
         grid-template-columns: repeat(3,1fr);
@@ -34,7 +37,7 @@
                 grid-column: span 4;
             }
             width: 100%;
-            margin-bottom:20px;
+            margin-bottom: 24px;
             position: relative;
             & label {
                 color: $gray;
@@ -43,9 +46,7 @@
                 left:0;
                 padding: 10px 0;
                 font-size: 18px;
-                font-weight: 400;
-                text-transform: uppercase;
-                transition: all .4s;
+                transition: .4s;
                 cursor: text;
                 pointer-events: none;
             }     
@@ -54,24 +55,29 @@
                 outline: none;
                 border: none;
                 display: block;
-                padding: 10px 0;
+                padding-top: 10px;
+                padding-bottom: 10px;
                 width: 100%;
-                border-bottom: 1.2px solid $divider;
                 color: $dark;
                 font-size: 16px;
+                border-bottom: 1.2px solid $divider;
                 &:focus ~ label, &:valid ~ label {
-                    top: -18px;
-                    left: 0;
+                    top: -24px;
                     font-size: 14px;
                     color: $primary-1;
                 }
-                &:focus {
+                &:focus, &:valid {
                     border-bottom: 1.2px solid $primary-1;
-                }  
+                }
             }
             & input[type=number]::-webkit-inner-spin-button, 
             & input[type=number]::-webkit-outer-spin-button {
                 -webkit-appearance: none; 
+            }
+            &:nth-child(4){
+                @include mobile($bp-xs){
+                    padding-right: 25px;
+                }
             }
         }
         &-submit {
