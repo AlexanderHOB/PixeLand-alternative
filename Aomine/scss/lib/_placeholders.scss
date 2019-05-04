@@ -24,6 +24,13 @@
 	}
 }
 
+// Centrar layout
+%layout-center {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	min-height: 100vh;
+}
 // Tap Highlight
 %tap-highlight {
 	user-select: none;
@@ -32,7 +39,7 @@
 
 // Padding de secciones
 %sec-p {
-	padding-top: 80px;
+	padding-top: 100px;
 }
 
 // Titles
@@ -58,6 +65,7 @@
 	@extend %title;
 	font-size: 2.5em;
 	font-weight: 500;
+	text-align: center;
 	@include mobile($bp-sm){
 		font-size: 3.5em;
 	}
@@ -74,6 +82,9 @@
 }
 %text-2 {
 	@extend %text;
+	text-align: center;
+	padding-top: 16px;
+	padding-bottom: 24px;
 	font-size: 1.15em;
 	font-weight: 400;
 	@include mobile($bp-sm){
@@ -106,11 +117,11 @@
 	}
 }
 %btn-effect-pix{
-    @extend %btn-1;
-    background: linear-gradient(90deg,#D133E7,#8032FB,#A035EB,#D133E7);
-    position: relative;
-    animation: btnColor 1s linear infinite;
-    background-size: 200%;
+	@extend %btn-1;
+	background: linear-gradient(90deg,#D133E7,#8032FB,#A035EB,#D133E7);
+	position: relative;
+	animation: btnColor 1s linear infinite;
+	background-size: 200%;
 }
 @keyframes btn-effect {
 	0% {
@@ -119,4 +130,23 @@
 	100% {
 		background-position: 400%;
 	}
+}
+
+// LAYOUT
+// Services
+%service-background {
+	width: 100%;
+	height: 200px;
+	background-size: cover;
+	position: absolute;
+	background-repeat: repeat-x;
+}
+
+// Planes
+%badge{
+	padding: 7px 10px 3px;
+	font-size: 16px;
+	font-weight: bold;
+	white-space: nowrap;
+	color: #ffffff;
 }

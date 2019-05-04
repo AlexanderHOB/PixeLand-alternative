@@ -7,13 +7,11 @@
 	}
 	&-title {
 		@extend %title-2;
-		color: $primary-1;
-		text-align: center;
+		color: $primary-2;
 	}
 	&-text {
 		@extend %text-2;
-		padding-top: 16px;
-		text-align: center;
+		padding-bottom: 0;
 	}
 }
 

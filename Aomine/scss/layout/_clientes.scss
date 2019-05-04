@@ -1,24 +1,19 @@
 // CLIENTES
 .clientes {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	min-height: 100vh;
+	@extend %layout-center;
 	@include desktop($bp-lg){
-		padding-top: 80px; 
+		padding-top: 100px; 
 	}
 	&-wrapper {
 		@extend %container;
 	}
 	&-title {
 		@extend %title-2;
-		color: $primary-2;
-		text-align: center;
+		color: $primary-1;
 	}
 	&-text {
 		@extend %text-2;
-		padding-top: 16px;
-		text-align: center;
+		padding-bottom: 0;
 	}
 	&-box {
 		display: flex;

@@ -3,6 +3,7 @@
 // Branch Primary Colors
 $primary-1: #7c32ff;
 $primary-2: #c738d8;
+$primary-3: #9334F2;
 
 // Branch Secondary Colors
 
@@ -67,3 +68,6 @@ $font-text: $poppins;
 $bg-primary: linear-gradient(to right, #8032FB 0%, #8032FB 20%, #9334F2 50%, #A035EB 82%, #D133E7 99%);
 $bg-secondary: linear-gradient(45deg, $primary-1 0%, $primary-2 100%);
 $bg-btn: linear-gradient(90deg, $primary-1, $primary-2, #9334F2, $primary-1);
+
+// Box shadow
+$box-shadow-1: 0 5px 28px rgba(51, 51, 51, .2);
