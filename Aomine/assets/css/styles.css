@@ -1449,11 +1449,17 @@ a {
 .service-background-top {
   background-image: url(../img/services/service-background-top.svg);
   top: 0;
+  -webkit-transform: translateY(-1px);
+  -ms-transform: translateY(-1px);
+  transform: translateY(-1px);
 }
 
 .service-background-bottom {
   background-image: url(../img/services/service-background-bottom.svg);
   bottom: 0;
+  -webkit-transform: translateY(1px);
+  -ms-transform: translateY(1px);
+  transform: translateY(1px);
 }
 
 .planes-title {

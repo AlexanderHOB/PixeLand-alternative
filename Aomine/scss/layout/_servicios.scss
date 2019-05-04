@@ -120,11 +120,13 @@
 	&-background-top {
 		@extend %service-background;
 		background-image: url(../img/services/service-background-top.svg);
-		top:0;
+        top:0;
+        transform: translateY(-1px);
 	}
 	&-background-bottom {
 		@extend %service-background;
 		background-image: url(../img/services/service-background-bottom.svg);
-		bottom:0;
+        bottom:0;
+        transform: translateY(1px);
 	}
 }
