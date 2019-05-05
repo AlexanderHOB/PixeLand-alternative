@@ -1,1 +1,259 @@
 // INICIO 
+
+.inicio {
+	position: relative;
+	z-index: 70;
+	width: 100%;
+	height: 100vh;
+	background-image: $bg-secondary;
+	&-wrapper {
+		@extend %container;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		height: 100%;
+	}
+	&-box {	
+		@include desktop($bp-md){
+			text-align: center;
+			&:nth-child(2) {
+				display: none;
+			}
+		}
+		@include mobile($bp-md){
+			width: 500px;
+		}
+	}
+	&-wave {
+		position: absolute;
+		bottom: 0;
+		right: 0;
+		z-index: 71;
+		width: 100%;
+		height: 230px;
+		background-image: url('../img/inicio/wave.svg');
+		background-size: cover;
+		background-repeat: repeat-x;
+		background-position: right;
+		transform: translateY(6px);
+		@include mobile(1400px) {
+			background-size: initial;
+			background-position: left;
+		}
+		&-fix {
+			position: absolute;
+			bottom: -3px;
+			right: 0;
+			z-index: 72;
+			width: 100%;
+			height: 6px;
+			background-color: #fff;
+		}
+	}
+	&-nixe {
+		display: none;
+		@include desktop($bp-md) {
+			position: absolute;
+			bottom: 1%;
+			right: 2%;
+			z-index: 72;
+			display: block;
+		}
+	}
+	&-items {
+		position: absolute;
+		top: 0;
+		z-index: -1;
+		width: 100%;
+		height: 100vh;
+		overflow: hidden;
+	}
+	&-item {
+		position: absolute;
+	}
+	&-item:nth-child(1) {
+		top: 10%;
+		left: -15%;
+		transform: rotate(-5deg);
+		opacity: .12;
+		img {
+			width: 100%;
+		}
+		@include mobile($bp-xs){
+			top: 10%;
+			left: -10%;
+		} 
+		@include mobile($bp-sm){
+			top: 10%;
+			left: -5%;
+		} 
+		@include mobile($bp-md){
+			top: 15%;
+			left: -5%;
+		} 
+	}
+	&-item:nth-child(2) {
+		top: 40%;
+		left: 30%;
+		transform: rotate(5deg);
+		opacity: .08;
+		img {
+			width: 100%;
+		}
+		@include desktop($bp-md){
+			left: 50%;
+		} 	
+	}
+	&-item:nth-child(3) {
+		top: 75%;
+		left: 5%;
+		transform: rotate(20deg);
+		opacity: .13;
+		img {
+			width: 80%;
+		}
+		@include mobile($bp-sm){
+			top: 80%;
+			left: 30%;
+		}
+		@include mobile($bp-sm-3){
+			left: 42%;
+		}
+		@include mobile($bp-md){
+			top: 65%;
+			left: 2%;
+		}
+	}
+	&-item:nth-child(4) {
+		top: 20%;
+		left: 45%;
+		transform: rotate(10deg);
+		opacity: .09;
+		img {
+			width: 60%;
+		}
+		@include desktop($bp-sm){
+			display: none;
+		} 	
+	}
+	&-item:nth-child(5) {
+		top: 18%;
+		left: 60%;
+		transform: translate(45px) rotate(30deg);
+		opacity: .08;
+		img {
+			width: 50%;
+		}
+		@include mobile($bp-xs){
+			top: 20%;
+			left: 80%;
+			transform: rotate(45deg);
+			img {
+				width: 70%;
+			}
+		} 	
+		@include mobile($bp-md){
+			top: 20%;
+			left: 20%;
+		}
+	}
+	&-item:nth-child(6) {
+		top: 55%;
+		right: -1%;
+		transform: rotate(10deg);
+		opacity: .1;
+		img {
+			width: 60%;
+		}
+		@include desktop($bp-sm){
+			display: none;
+		} 	
+	}
+	&-item:nth-child(7) {
+		top: 12%;
+		right: 7%;
+		transform: rotate(-30deg);
+		opacity: .08;
+		img {
+			width: 60%;
+		}
+		@include desktop($bp-md){
+			display: none;
+		} 	
+	}
+	&-item:nth-child(8) {
+		top: 88%;
+		right: 20%;
+		transform: rotate(-10deg);
+		opacity: .15;
+		img {
+			width: 100%;
+		}
+		@include desktop($bp-md){
+			display: none;
+		} 	
+	}
+	&-item:nth-child(9) {
+		top: 45%;
+		left: 50%;
+		transform: rotate(-20deg);
+		opacity: .06;
+		img {
+			width: 70%;
+		}
+		@include desktop($bp-md){
+			display: none;
+		} 	
+	}
+}
+
+// Primary Content
+.primaryContent {
+	color: $text-light;
+	&-title {
+		margin-bottom: 8px;
+		text-transform: uppercase;
+		@extend %title-1;
+	}
+	&-container {
+		display: flex;
+		flex-direction: column;
+	}
+	&-text {
+		@extend %text-1;
+	}
+	&-branch {
+		font-weight: 600;	
+	}
+	&-effect {
+		color: $yellow;
+	}
+	&-slogan {
+		font-style: italic;
+		@include mobile($bp-md){
+			align-self: flex-end;
+		}
+	}
+}
+
+// Developing
+.developing {
+	position: relative;
+	z-index: 73;
+	display: block;
+	perspective: 800px;
+	&-img {
+		transform: rotateY(-30deg);
+		transform-style: preserve-3d;
+		transition: transform .5s;
+		&:hover {
+			transform: rotateY(-15deg);
+		}
+	}
+	&-cubes {
+		position: absolute;
+		top: 0;
+		left: 0;
+		z-index: -1;
+	}
+}

@@ -13,7 +13,7 @@
         align-items: center;
         flex-flow: wrap column;
     }
-    &-image-nux{
+    &-image-nux {
         position: absolute;
         width:200px;
         height: 200px;
@@ -23,7 +23,7 @@
         opacity: .5;
         background-image: url(../img/contactanos/cartero.png);
     }
-    &-image-message{
+    &-image-message {
         &-1{
             @extend %contactanos-image-message;
             right:10%;
@@ -33,7 +33,7 @@
             opacity: .5;
             animation: contactanos-message 5s linear alternate infinite;
         }
-        @keyframes contactanos-message{
+        @keyframes contactanos-message {
             from{
                 transform: rotate(0deg);
             }

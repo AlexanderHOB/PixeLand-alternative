@@ -1,1 +1,80 @@
 // BLOG
+.blog {
+	@extend %sec-p;
+	&-wrapper {
+		@extend %container;
+	}
+	&-title {
+		@extend %title-2;
+		color: $primary-2;
+	}
+	&-text {
+		@extend %text-2;
+	}
+	&-row {
+		display: flex;
+		justify-content: space-around;
+	}
+	&-column {
+		width: 40%;
+	}
+	&-post {
+		background-color: $light;
+		margin-top: 50px;
+		box-shadow: $box-shadow-1;
+		border-radius: 20px;
+		overflow: hidden;
+		&-imgBox {
+			height: 400px;
+			background-color: $light;
+		}
+		&-img {
+			height: 100%;
+			object-fit: cover;
+		}
+		&-content {
+			display: flex;
+			flex-direction: column;
+			padding: 16px;
+		}
+		&-title {
+			margin-bottom: 10px;
+			font-weight: 600;
+			font-size: 1.5em;
+		}
+		&-text {
+			margin-bottom: 16px;
+			&-strong {
+				font-weight: 700;
+			}
+			&-link {
+				color: $link-primary;
+			}
+		}
+		&-btnBox {
+			display: flex;
+			justify-content: space-between;
+		}
+		&-btn {
+			@extend %btn-effect;
+		}
+	}
+	@include desktop($bp-md) {
+		&-row {
+			flex-wrap: wrap;
+		}
+		&-column {
+			width: 60%;
+		}
+	}
+	@include desktop($bp-sm) {
+		&-column {
+			width: 80%;
+		}
+	}
+	@include desktop($bp-xs) {
+		&-column {
+			width: 95%;
+		}
+	}
+}

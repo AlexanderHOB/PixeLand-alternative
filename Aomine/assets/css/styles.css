@@ -213,7 +213,7 @@ a, .service-box {
   -webkit-tap-highlight-color: transparent;
 }
 
-.planes, .portafolio, .blog {
+.planes, .portafolio, .clientes, .blog {
   padding-top: 100px;
 }
 
@@ -729,9 +729,6 @@ a {
     background-position: center;
     background-repeat: no-repeat;
     overflow: hidden;
-    -webkit-transform: translate(-3px, -5px);
-    -ms-transform: translate(-3px, -5px);
-    transform: translate(-3px, -5px);
   }
   .nav-header-avatar-branch {
     margin-top: 20px;
@@ -962,15 +959,12 @@ a {
 
 .inicio-wave-fix {
   position: absolute;
-  bottom: 0;
+  bottom: -3px;
   right: 0;
   z-index: 72;
   width: 100%;
   height: 6px;
-  background-color: #ffffff;
-  -webkit-transform: translateY(3px);
-  -ms-transform: translateY(3px);
-  transform: translateY(3px);
+  background-color: #fff;
 }
 
 .inicio-nixe {
@@ -1300,13 +1294,12 @@ a {
   z-index: 50;
   padding-top: 250px;
   padding-bottom: 200px;
+  color: #ffffff;
 }
 
 .services-title {
   position: relative;
-  padding-bottom: 8px;
   margin-bottom: 10px;
-  color: #ffffff;
 }
 
 .services-title:before {
@@ -1331,10 +1324,6 @@ a {
   transform: scaleX(0.5);
 }
 
-.services-text {
-  color: #ffffff;
-}
-
 .services-container {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1350,7 +1339,6 @@ a {
   position: relative;
   width: 30.33%;
   padding: 10px;
-  color: #ffffff;
   cursor: pointer;
   text-align: center;
 }
@@ -1391,7 +1379,6 @@ a {
   width: 70px;
   height: 70px;
   border: 3px solid #ffffff;
-  color: #ffffff;
   border-radius: 50%;
   margin-bottom: 30px;
   margin-top: 16px;
@@ -1715,12 +1702,6 @@ a {
   }
   to {
     opacity: 1;
-  }
-}
-
-@media only screen and (max-width: 1199px) {
-  .clientes {
-    padding-top: 100px;
   }
 }
 
@@ -2102,36 +2083,26 @@ a {
   position: relative;
   width: 100%;
   height: 500px;
-  background-size: contain;
 }
 
 .footer-copywrite {
   position: absolute;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  text-align: center;
-  top: 90%;
+  bottom: 2%;
   width: 100%;
-  font-family: "Poppins";
-  font-size: 18px;
+  font-size: 16px;
+  text-align: center;
 }
 
-.footer-copywrite a {
-  color: #01b1ea;
+.footer-copywrite-developers {
+  color: #7c32ff;
+  font-weight: 600;
 }
 
 .footer .footer-social {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
   position: relative;
   top: 200px;
   width: 100%;
-  height: 250px;
+  height: 50%;
 }
 
 .footer .footer-social-logo-yt {
@@ -2210,7 +2181,7 @@ a {
   height: 500px;
   background-repeat: no-repeat;
   background-position: 12% bottom;
-  background-image: url("../img/footer/background/footer.svg");
+  background-image: url("../img/footer/footer.svg");
   background-size: cover;
 }
 
@@ -2225,7 +2196,7 @@ a {
   top: 68%;
   left: 84%;
   background-image: url("../img/footer/Nixe-c.png");
-  width: 120PX;
+  width: 120px;
   height: 120px;
   background-repeat: no-repeat;
 }

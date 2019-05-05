@@ -1069,8 +1069,9 @@ class Component {
 
     _navLinks() {
       this._closeBound = this.close.bind(this);
-      const bp = window.matchMedia('only screen and (max-width: 767px)');
-      const validation = e => {
+      const bp = window.matchMedia('only screen and (max-width: 991px)'),
+      $navLinks = document.querySelectorAll('.nav-link'),
+      validation = e => {
         var instances;
         if (e.matches) {
           for(let i of $navLinks){
@@ -1081,7 +1082,7 @@ class Component {
             i.removeEventListener('click',this._closeBound);
           }
         }
-      }
+      };
 
       bp.addListener(validation);
       validation(bp);

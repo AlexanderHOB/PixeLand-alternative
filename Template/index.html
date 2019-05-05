@@ -5,16 +5,18 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
 	<meta name="author" content="NibbleFrame, nibbleframe247@gmail.com">
-	<meta name="description" content="PixeLand | NibbleFrame | NibbleFrame">
+	<meta name="description" content="PixeLand | NibbleFrame">
 	<meta name="language" content="es">
 
-	<title>PixeLand | NibbleFrame</title>
+	<title>PixeLand | Atrevete a innovar</title>
 
 	<!-- FONTS -->
-	<!-- Roboto -->
-	<link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900" rel="stylesheet">
 	<!-- Poppins -->
 	<link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+	<!-- Itim -->
+	<link href="https://fonts.googleapis.com/css?family=Itim" rel="stylesheet">
+	<!-- Sriracha -->
+	<link href="https://fonts.googleapis.com/css?family=Sriracha" rel="stylesheet">
 
 	<!-- DEVELOPMENT -->
 	<!-- FontAwesome -->
@@ -26,11 +28,16 @@
 	<link rel="stylesheet" href="assets/css/styles.css">
 	
 	<!-- ICON -->
-	<link rel="shortcut icon" href="assets/img/Nixe.ico">
+	<link rel="shortcut icon" href="favicon.ico">
 </head>
 <body>
 	
 	<!-- LOADING -->
+	<!-- Loader-Nixe -->
+	<div class="loader-nixe">
+		<div class="loader-nixe-sprite"></div>
+	</div>
+	<!-- On Ckange -->
 	<div id="loader" class="loader">
 		<div class="loader-container">
 			<svg class="loader-circular" viewBox="25 25 50 50">
@@ -40,43 +47,433 @@
 	</div>
 
 	<!-- HEADER -->
-	<header class="header"></header>
+	<header class="header">
+		<div class="header-wrapper">
+			<div class="header-responsive">
+				<button class="nav-toggle waves" data-target="sidenav">
+					<i class="fas fa-stream nav-toggle-icon"></i>
+				</button>
+				<a href="#inicio" class="brand"><div class="brand-img"></div></a>
+			</div>	
+
+			<!-- NAV -->
+			<nav id="sidenav" class="nav sidenav">
+				<div class="nav-header">
+					<button class="nav-header-close waves">
+						<i class="fas fa-times nav-header-icon"></i>
+					</button>
+					<div class="nav-header-bg"></div>
+					<div class="nav-header-avatar">
+						<div class="nav-header-avatar-img"></div>
+						<p class="nav-header-avatar-branch">PixeLand</p>
+						<p class="nav-header-avatar-email"><i class="fas fa-envelope nav-header-avatar-email-icon"></i> pixeland@gmail.com</p>
+					</div>
+				</div>
+				<ul class="nav-content">
+					<li class="nav-item"><a href="#inicio" data-spy="inicio" class="nav-link nav-link-active">Inicio<div class="nav-destroy"></div></a></li>
+					<li class="nav-item"><a href="#nosotros" data-spy="nosotros" class="nav-link">Nosotros<div class="nav-destroy"></div></a></li>
+					<li class="nav-item"><a href="#services" data-spy="services" class="nav-link">Servicios<div class="nav-destroy"></div></a></li>
+					<li class="nav-item"><a href="#planes" data-spy="planes" class="nav-link">Planes<div class="nav-destroy"></div></a></li>
+					<li class="logo"><a href="#inicio" class="logo-link"><img src="assets/img/nixe/nixe-hands-up.png" alt="Nixe-chan" class="logo-img"></a></li>
+					<li class="nav-item"><a href="#portafolio" data-spy="portafolio" class="nav-link">Portafolio<div class="nav-destroy"></div></a></li>
+					<li class="nav-item"><a href="#clientes" data-spy="clientes" class="nav-link">Clientes<div class="nav-destroy"></div></a></li>
+					<li class="nav-item"><a href="#blog" data-spy="blog" class="nav-link">Blog<div class="nav-destroy"></div></a></li>
+					<li class="nav-item"><a href="#contactanos" data-spy="contactanos" class="nav-link">Contactanos<div class="nav-destroy"></div></a></li>
+				</ul>
+				<div class="nav-footer">
+					<p><i class="fas fa-drafting-compass"></i> Design by <a href="https://nibbleframe.com" target="_blank" class="nav-footer-nf">NibbleFrame</a></p>
+				</div>
+			</nav>
+		</div>
+	</header>
 
 	<!-- INICIO -->
-	<section id="inicio" class="inicio"></section>
+	<section id="inicio" class="inicio">
+		<div class="inicio-wrapper">
+			<div class="inicio-box">
+				<div class="primaryContent">
+					<h1 class="primaryContent-title">Rompe tus fronteras</h1>
+					<div class="primaryContent-container">
+						<p class="primaryContent-text">En <span class="primaryContent-branch">PixeLand</span> te ayudamos a innovar y hacer crecer tu <span id="typewriter" class="primaryContent-effect"></span> brindandote precencia tanto en la web como en las redes sociales.</p>
+						<span class="primaryContent-slogan">Atrevete a innovar~</span>
+					</div>
+				</div>
+			</div>
+			<div class="inicio-box">
+				<div class="developing">
+					<img src="assets/img/inicio/development.png" alt="developing a page" class="developing-img">
+					<img src="assets/img/inicio/development-cubes.png" alt="developing a page" class="developing-cubes">
+				</div>
+			</div>
+		</div>
 
-	<!-- NOSOTROS -->
-	<section id="nosotros" class="nosotros"></section>
+		<!-- Wave -->
+		<div class="inicio-wave">
+			<div class="inicio-wave-fix"></div>
+		</div>
 
-	<!-- SERVICIOS -->
-	<section id="servicios" class="servicios"></section>
+		<!-- Nixe responsive -->
+		<div class="inicio-nixe">
+			<img src="assets/img/nixe/Nixe-responsive-up.png" alt="nixe" class="nixe-responsive">
+		</div>
 
-	<!-- PAGOS -->
-	<section id="pagos" class="pagos"></section>
-
-	<!-- PORTAFOLIO -->
-	<section id="portafolio" class="portafolio"></section>
-
-	<!-- CLIENTES -->
-	<section id="clientes" class="clientes"></section>
-
-	<!-- BLOG -->
-	<section id="blog" class="blog"></section>
-
-	<!-- CONTACTANOS -->
-	<section id="contactanos" class="contactanos">
+		<!-- Inicio items -->
+		<ul class="inicio-items">
+			<li class="inicio-item"><img src="assets/img/inicio/pc-gris.png" alt="pc gris" class="inicio-item-img"></li>
+			<li class="inicio-item"><img src="assets/img/inicio/tablet-gris.png" alt="tablet gris" class="inicio-item-img"></li>
+			<li class="inicio-item"><img src="assets/img/inicio/cellphone-gris.png" alt="cellphone gris" class="inicio-item-img"></li>
+			<li class="inicio-item"><img src="assets/img/inicio/pc-gris.png" alt="pc gris" class="inicio-item-img"></li>
+			<li class="inicio-item"><img src="assets/img/inicio/tablet-gris.png" alt="tablet gris" class="inicio-item-img"></li>
+			<li class="inicio-item"><img src="assets/img/inicio/cellphone-gris.png" alt="cellphone gris" class="inicio-item-img"></li>
+			<li class="inicio-item"><img src="assets/img/inicio/pc-gris.png" alt="pc gris" class="inicio-item-img"></li>
+			<li class="inicio-item"><img src="assets/img/inicio/tablet-gris.png" alt="tablet gris" class="inicio-item-img"></li>
+			<li class="inicio-item"><img src="assets/img/inicio/cellphone-gris.png" alt="cellphone gris" class="inicio-item-img"></li>
+		</ul>
 	</section>
 
-	<!-- FOOTER -->
-	<footer id="footer" class="footer"></footer>
+	<!-- NOSOTROS -->
+	<section id="nosotros" class="nosotros">
+		<div class="nosotros-wrapper">
+			<h2 class="nosotros-title">Nosotros</h2>
+			<p class="nosotros-content">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias, nostrum perspiciatis soluta, nesciunt illo perferendis? Quae repellendus quas accusamus nihil iste ea repellat, ipsum sapiente corrupti nobis, beatae aperiam eveniet.</p>
+			<a href="nosotros/" class="nosotros-btn waves">Conocenos</a>
+		</div>
+	</section>
 
-	<!-- JAVASCRIPT -->
-	<!-- Libraries -->
-	<script src="assets/resources/aos/aos.js"></script>
-	<!-- Code -->
-	<script src="assets/js/material.js"></script>
-	<script src="assets/js/nProgress.js"></script>
-	<script src="assets/js/loader.js"></script>
-	<script src="assets/js/main.js"></script>
-</body>
-</html>
+	<!-- SERVICIOS -->
+	<section id="services" class="services">
+		<div class="service-background-top"></div>
+		<div class="service-background-bottom"></div>
+
+		<div class="services-wrapper">
+			<h2 class="services-title">Nuestros Servicios</h2>
+			<p class="services-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa perspiciatis corrupti laboriosam nobis saepe voluptate, beatae esse eligendi tempore, id eum sequi quas possimus maxime debitis aspernatur iste, nulla qui?</p>
+			<div class="services-container">
+				<div class="service-box">
+					<div class="service-icon">
+						<i class="fas fa-paint-brush"></i>
+					</div>
+					<div class="service-title">Diseño Web</div>
+					<div class="service-description">
+						Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quasi nulla, porro molestiae quod, reprehenderit quis quaerat! Earum voluptatibus provident, placeat voluptate consequatur optio quisquam tenetur harum error omnis, perferendis facilis.
+					</div>
+				</div>
+				<div class="service-box">
+					<div class="service-icon">
+						<i class="fas fa-code"></i>
+					</div>
+					<div class="service-title">Desarrollo Web</div>
+					<div class="service-description">
+						Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quasi nulla, porro molestiae quod, reprehenderit quis quaerat! Earum voluptatibus provident, placeat voluptate consequatur optio quisquam tenetur harum error omnis, perferendis facilis.
+					</div>
+				</div>
+				<div class="service-box">
+					<div class="service-icon">
+						<i class="fas fa-brush"></i>
+					</div>
+					<div class="service-title">Diseño Adaptable</div>
+					<div class="service-description">
+						Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quasi nulla, porro molestiae quod, reprehenderit quis quaerat! Earum voluptatibus provident, placeat voluptate consequatur optio quisquam tenetur harum error omnis, perferendis facilis.
+					</div>
+				</div>
+				<div class="service-box">
+					<div class="service-icon">
+						<i class="fas fa-object-ungroup"></i>
+					</div>
+					<div class="service-title">Sección de Administración de Contenido</div>
+					<div class="service-description">
+						Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quasi nulla, porro molestiae quod, reprehenderit quis quaerat! Earum voluptatibus provident, placeat voluptate consequatur optio quisquam tenetur harum error omnis, perferendis facilis.
+					</div>
+				</div>
+				<div class="service-box">
+					<div class="service-icon">
+						<i class="fas fa-database"></i>
+					</div>
+					<div class="service-title">Base de Datos</div>
+					<div class="service-description">
+						Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quasi nulla, porro molestiae quod, reprehenderit quis quaerat! Earum voluptatibus provident, placeat voluptate consequatur optio quisquam tenetur harum error omnis, perferendis facilis.
+					</div>
+				</div>
+				<div class="service-box">
+					<div class="service-icon">
+						<i class="fab fa-android"></i>
+					</div>
+					<div class="service-title">Aplicaciones Android</div>
+					<div class="service-description">
+						Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quasi nulla, porro molestiae quod, reprehenderit quis quaerat! Earum voluptatibus provident, placeat voluptate consequatur optio quisquam tenetur harum error omnis, perferendis facilis.
+					</div>
+				</div>
+				
+			</div>
+
+		</div>
+	</section>
+
+	<!-- PLANES -->
+	<section id="planes" class="planes">
+		<div class="planes-wrapper">
+			<h2 class="planes-title">Nuestros Planes para ti</h2>
+			<p class="planes-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis eveniet illum eos quidem fugiat, debitis, assumenda tempore sit dolor et. Eligendi maiores, aperiam facere architecto quo veritatis molestias aut hic.</p>
+			<div class="planes-content">
+				<div class="plan-content">
+					<div class="plan-content-title">
+						<h3>Emprendedor</h3>
+						<h4><span><del>S/.100</del></span> <span class="badge">S/.80</span> <span>Mensual</span></h4>
+					</div>
+					<div class="plan-content-features">
+						<ul>
+							<li><b>HOSTING </b> gratis</li>
+							<li>Diseño de <b>Logo</b></li>
+							<li>Pagina Web (<b>4</b> Pestañas)</li>
+							<li>SEO Básico</li>
+							<li>Adaptable a celulares</li>
+							<li>Botones de Mensajería WhatsApp - Messenger</li>
+							<li>Mapa de google</li>
+							<li>Formulario</li>
+							<li>Soporte</li>  
+							<li>5 cambios</li>
+							<li>SSL gratis (https)</li>
+							<li>Base de Datos de clientes</li>
+							<li>Contrato mínimo por<b> 6 meses</b>	</li>
+						</ul>
+					</div>
+					<div class="plan-content-button">
+						<a href="#contactanos" class="waves">Empecemos</a>
+					</div>
+				</div>
+				<div class="plan-content">
+					<div class="plan-content-title">
+						<h3>Profesional</h3>
+						<h4><span><del>S/.800</del></span> <span class="badge">S/.700</span> <span>Un solo pago</span></h4>
+					</div>
+					<div class="plan-content-features">
+						<ul>
+							<li><b>HOSTING </b> gratis por <b>1</b> año</li>
+							<li>Sub-Dominio gratis</li>
+							<li>Diseño de <b>Logo</b></li>
+							<li>Pagina Web (<b>5</b> Pestañas)</li>
+							<li>SEO Basico</li>
+							<li>Adaptable a celulares</li>
+							<li>Botones de Mensajería WhatsApp - Messenger</li>
+							<li>Mapa de google</li>
+							<li>Formulario</li>
+							<li>Soporte</li>
+							<li>Base de datos de clientes</li>
+							<li>SSL gratis (https)</li>
+							<li>10 cambios</li>
+						</ul>
+					</div>
+					<div class="plan-content-button">
+						<a href="#contactanos" class="waves">Empecemos</a>
+					</div>
+				</div>
+				<div class="plan-content">
+					<div class="plan-content-title">
+						<h3>Experto</h3>
+						<h4>Consultar</span></h4>
+					</div>
+					<div class="plan-content-features">
+						<ul>
+							<li><b>HOSTING </b> gratis</li>
+							<li>Dominio Gratis</li>
+							<li>Diseño de <b>Logo</b></li>
+							<li>Pagina Web (pestañas ilimitadas)</li>
+							<li>SEO Intermedio</li>
+							<li>Animaciones Personalizadas</li>
+							<li>Adaptable a celulares</li>
+							<li>Botones de Mensajería WhatsApp - Messenger</li>
+							<li>Mapa de google</li>
+							<li>Formulario</li>
+							<li>Soporte</li>  
+							<li>+20 cambios</li>
+							<li>SSL gratis (https)</li>
+							<li>Correo Corporativo</li>
+							<li>Base de Datos de clientes</li>
+							<li>Administración de Social Media</li>
+						</ul>
+					</div>
+					<div class="plan-content-button">
+						<a href="#contactanos" class="waves">Empecemos</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- PORTAFOLIO -->
+	<section id="portafolio" class="portafolio">
+		<div class="portafolio-wrapper">
+			<h2 class="portafolio-title">Portafolio</h2>
+			<p class="portafolio-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Numquam cupiditate, maiores perspiciatis odio omnis est ad porro, eius in pariatur saepe corrupti sapiente corporis, laudantium culpa repellendus earum iusto iure?</p>
+			<div class="slider">
+				<figure>
+					<img src="assets/img/portafolio/mask.png" class="slider-mask" alt="mask-img">
+					<img src="assets/img/portafolio/mask-dark.png" class="slider-mask-dark" alt="mask-img">
+					<img src="assets/img/portafolio/newCollege.png" class="slider-img slider-active" alt="mask-img">
+					<img src="assets/img/portafolio/penion.png" class="slider-img" alt="mask-img">
+					<img src="assets/img/portafolio/sistemaGST.png" class="slider-img" alt="mask-img">
+				</figure>
+
+				<a href="javascript:void(0)" class="slider-arrow slider-arrow-previous"><i class="fas fa-chevron-left slider-arrow-icon"></i></a>
+				<a href="javascript:void(0)" class="slider-arrow slider-arrow-next"><i class="fas fa-chevron-right slider-arrow-icon"></i></a>
+			</div>
+		</div>
+	</section>
+
+	<!-- CLIENTES -->
+	<section id="clientes" class="clientes">
+		<div class="clientes-wrapper">
+			<h2 class="clientes-title">Clientes</h2>
+			<p class="clientes-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. In nihil quos saepe a similique totam excepturi, enim natus, voluptatum rerum eum veritatis aspernatur minus ipsum accusamus voluptate minima quis suscipit.</p>
+			<div class="clientes-box">
+				<a href="http://xn--elpeon-zwa.net/" target="_blanck" class="clientes-link"><img src="assets/img/clientes/penion.png" alt="El Peñon" class="clientes-img">
+					<span class="clientes-link-corner"></span>
+					<span class="clientes-link-corner"></span>
+					<span class="clientes-link-corner"></span>
+					<span class="clientes-link-corner"></span></a>
+					<a href="https://nibbleframe.com/newCollege/" target="_blanck" class="clientes-link"><img src="assets/img/clientes/newCollege.png" alt="New College" class="clientes-img">
+						<span class="clientes-link-corner"></span>
+						<span class="clientes-link-corner"></span>
+						<span class="clientes-link-corner"></span>
+						<span class="clientes-link-corner"></span>
+					</a>
+					<a href="https://nibbleframe.com/sistemaGST/" target="_blanck" class="clientes-link"><img src="assets/img/clientes/sistemaGST.png" alt="sistemaGST" class="clientes-img">
+						<span class="clientes-link-corner"></span>
+						<span class="clientes-link-corner"></span>
+						<span class="clientes-link-corner"></span>
+						<span class="clientes-link-corner"></span></a>
+					</div>
+				</div>
+			</section>
+
+			<!-- BLOG -->
+			<section id="blog" class="blog">
+				<div class="blog-wrapper">
+					<h2 class="blog-title">Blog</h2>
+					<p class="blog-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis magnam tenetur doloremque maxime ea hic impedit illo officia numquam. Inventore omnis nobis itaque tenetur cum optio, facilis recusandae harum, debitis.</p>
+					<div class="blog-row">
+						<div class="blog-column">
+							<div class="blog-post">
+								<div class="blog-post-imgBox">
+									<!-- <img src="assets/img/material-theme.jpg" alt="img post" class="blog-post-img"> -->
+								</div>
+								<div class="blog-post-content">
+									<h3 class="blog-post-title">🔔 Material Theme para VSCode.</h3>
+									<p class="blog-post-text">📌 Hoy les comparto el tema de color e iconos que yo uso y como cambiar la fuente de letra en VSCode.<br>✔ <span class="blog-post-text-strong">Tema: Material Theme</span><br>Un tema que cuenta con distintos y agradables colores tanto de fondo como de letras.<br>✔ <span class="blog-post-text-strong">Iconos: Material Icon Theme</span><br>Un pack de iconos muy variados no solo para lenguajes sino también para algunas carpetas con nombres comunes como el famoso (model, view y controller).<br>✔ <span class="blog-post-text-strong">Fuente de letra: Comic Sans MS</span><br>Un fuente de letra que me agrada mucho, en este punto tu puedes elegir la fuente de letra que mas te guste aunque algunos desarrolladores recomiendan no hacerlo y dejarlo en la fuente de letra por defecto(consolas) pero creo que es algo que depende de cada persona.</p>
+									<div class="blog-post-btnBox">
+										<a href="https://www.youtube.com/watch?v=ss2JTjg7KPQ" target="_blank" class="blog-post-btn waves">Míralo</a>
+										<a href="javascript:void(0)" class="blog-post-btn btn-leer-mas waves">Leer Más</a>
+									</div>
+								</div>
+							</div>
+							<div class="blog-post">
+								<div class="blog-post-imgBox">
+									<!-- <img src="assets/img/rocket.jpg" alt="img post" class="blog-post-img"> -->
+								</div>
+								<div class="blog-post-content">
+									<h3 class="blog-post-title">🚀 // Rocket - HTML | CSS | ParticleJS</h3>
+									<p class="blog-post-text">🌀 <span class="blog-post-text-strong">JUST FOR FUN</span> 🌀<br>📌 document.write('Pasando el rato jugando con la libreria particleJS para relajarse un rato de tanto código complicado, estresante y hermoso :v, ')<br><br>✔ var link = '<a href="https://aomine1745.github.io/rocket/" target="_blank" class="blog-post-text-link">Miralo tu mismo 🔮</a>';<br>✔ var code = '<a href="https://github.com/aomine1745/rocket" target="_blank" class="blog-post-text-link">¿Quieres ver el codigo? 💻</a>';<br>✔ var library = '<a href="https://vincentgarreau.com/particles.js/#default" target="_blank" class="blog-post-text-link">prueba esta increible libreria 🎇</a>'<br>✔ var autor = 'Online Tutorials' ⚡</p>
+									<div class="blog-post-btnBox">
+										<a href="https://www.youtube.com/watch?v=uCT3RRmNxH0" target="_blank" class="blog-post-btn waves">Míralo</a>
+										<a href="javascript:void(0)" class="blog-post-btn btn-leer-mas waves">Leer Más</a>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="blog-column">
+							<div class="blog-post">
+								<div class="blog-post-imgBox">
+									<!-- <img src="assets/img/peor-vida.jpg" alt="img post" class="blog-post-img"> -->
+								</div>
+								<div class="blog-post-content">
+									<h3 class="blog-post-title">🔔 Como tener La peor vida Posible</h3>
+									<p class="blog-post-text">📌 ¿Tu vida es feliz, te sientes motivado y con ganas de cumplir tus metas? pues bien te traigo la solución para terminar con esa aburrida vida feliz y empieces a tener la peor vida posible. 🔔<br>✔ Pero no es como que naturalmente te vas a volver miserable esto te tomara tiempo, mucha disciplina y trabajo pero tienes que empeñarte en lograrlo. Empecemos 😀<br>📌 Aíslate de todos, ten la menor interacción con otras personas. 😶<br>📌 Siempre juzga a las personas y hazles saber lo superior que eres a el. 👉🏾<br>📌 Menosprecia y búrlate de los demás ya que tu eres el mejor en todo. 😉<br>📌 Quéjate de todo aunque no te afecte. 😡<br>📌 No vivas en el presente, no superes tus traumas y piensa en todas las cosas que nunca te van a pasar. 😒<br>📌 Ponte metas inalcanzables, céntrate en el objetivo final y no disfrutes del proceso ni de las pequeñas victorias. 🎯<br>📌 Nunca dejes tu zona de confort, no pruebes cosas nuevas ni te arriesgues osea ¿para qué?. 😎<br>📌 Recuerda que siempre puedes empezar mañana en vez de hoy. 🙂<br>✔ Y listo no va a importar si la vida quiere que seas feliz, con estos simples pasos no habrá manera de que seas feliz.<br>💭 "Todo lo que te hace miserable esta en tus propios hábitos y acciones."<br>💬 Y si tienes otros consejos no dudes en comentarlo<br>🌀 Solo un pequeño cambio de perspectiva puede cambiarlo todo... 🌀</p>
+									<div class="blog-post-btnBox">
+										<a href="https://www.youtube.com/watch?v=ZUwy-Qd2aQc&fbclid=IwAR0C_PDf2VHKxpmPsNZ3mgTghpi0T3r3BX9ZxIu9O8qscjxDABe9XfP8Ftw" target="_blank" class="blog-post-btn waves">Míralo</a>
+										<a href="javascript:void(0)" class="blog-post-btn btn-leer-mas waves">Leer Más</a>
+									</div>
+								</div>
+							</div>
+							<div class="blog-post">
+								<div class="blog-post-imgBox">
+									<!-- <img src="assets/img/sublime-32.jpg" alt="img post" class="blog-post-img"> -->
+								</div>
+								<div class="blog-post-content">
+									<h3 class="blog-post-title">🔔 Sublime Text 3.2 fue lanzado hoy !!! 🔔</h3>
+									<p class="blog-post-text">
+										⚠ Para evitar discusiones innecesarias aclaro que VSCode es actualmente el mejor editor de código y no lo digo yo, lo dicen las estadísticas.<br>📣 Su principal nueva característica es la itegración con GIT que se complementa con un gestor visual de repositorios llamado sublime merge.<br>✔ Sublime Text es un editor de código enfocado en tecnologías web desarrollado en phyton, por eso es muy rápido y gracias a la implementación de algunos plugins se puede potenciar mucho más. pero frente a otros editores como vscode carece de muchas cosas indispensables para el desarrollo actual como una terminal integrada, otra era la integración con git que gracias a esta actualización ya lo tiene.<br>🌀 Sublime fue considerado unos de los mejores editores o el mejor por algunos desarrolladores por mucho tiempo hasta la llegada de vscode que cuenta con cosas increíbles y rápidamente se convirtió en el editor favorito de la gran mayoría de desarrolladores y considerado el mejor por muchos otros(yo incluido) y que poco a poco se parece más a un IDE y lamentablemente sublime no implemento nuevas características y se quedo atrás, pero gracias a esta actualización se esta volviendo a hablar de este editor. ¿algún día implementara una terminal integrada propia? y ya se que algunos plugins te perminten tenerla, volviendo al punto ¿sublime text intenta revivir y poder estar a la altura de vscode? espero que sea así, ya que esto genera competencia y hace que los desarrolladores de estos se esfuercen más para entregar un mejor producto y los beneficiados somos nosotros que tendremos mejores editores, y espero que vscode no monopolice el mercado.<br>💬 <a href="https://www.sublimetext.com/blog/articles/sublime-text-3-point-2?fbclid=IwAR0yIBCfa2ECLj2T6rUzGMd8Hg4-H3hKgd3mwIKyYv3yUG1hFpZz5rgKUXM" target="_blank" class="blog-post-text-link">Notas de la actualización aqui</a></p>
+										<div class="blog-post-btnBox">
+											<a href="https://www.youtube.com/watch?v=6dq7qF98Vso" target="_blank" class="blog-post-btn waves">Míralo</a>
+											<a href="javascript:void(0)" class="blog-post-btn btn-leer-mas waves">Leer Más</a>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
+
+				<!-- CONTACTANOS -->
+				<section id="contactanos" class="contactanos">
+					<div class="contactanos-image-nux"></div>
+					<div class="contactanos-image-message-1"></div>
+					<div class="contactanos-image-message-2"></div>
+					<div class="contactanos-image-message-3"></div>
+
+					<div class="contactanos-wrapper">
+						<h2 class="contactanos-title">¿Buscas innovar con nuestra ayuda 🙌?</h2>
+						<p class="contactanos-text">Genial!, solo realiza un paso simple para empezar 😊</p>
+						<form action="" method="POST" class="contactanos-form" autocomplete="off">
+							<div class="contactanos-form-group">
+								<input type="text" name="name" id="name" required>
+								<label for="name">Nombre</label>
+							</div>
+							<div class="contactanos-form-group">
+								<input type="number" name="cel" id="cel" required>
+								<label for="cel">Celular</label>
+							</div>
+							<div class="contactanos-form-group">
+								<input type="email" name="email" id="email" required>			
+								<label for="email">Email</label>
+							</div>
+							<div class="contactanos-form-group">
+								<input type="text" name="mensaje" id="mensaje" class="contactanos-form-message" required>		
+								<label for="mensaje">Mensaje</label>
+							</div>
+							<div class="contactanos-form-submit">
+								<button type="submit" class="waves">Enviar!</button>
+							</div>
+						</form>
+					</div>
+				</section>
+
+				<!-- FOOTER -->
+				<footer id="footer" class="footer">
+					<div class="wave-nixe">
+						<div class="nixe-footer"></div>
+					</div>
+					<div class="footer-social">
+						<a href="https://www.facebook.com/TeamPixeLand" target="_blank"><img class="footer-social-logo-fb" src="assets/img/footer/fb.png"  alt="Facebook"></a>
+						<a href="https://instagram.com" target="_blank"><img class="footer-social-logo-ins" src="assets/img/footer/ins.png" alt="Twitter"></a>
+						<a href="https://www.youtube.com" target="_blank"><img class="footer-social-logo-yt" src="assets/img/footer/yt.png" alt="Youtube"></a>
+					</div>
+					<small class="footer-copywrite">&copy; <span id="year"></span> All rights reserved - Desarrollado por <a href="www.nibbleframe.com" target="_blank" class="footer-copywrite-developers"> NibbleFrame</a></small>
+				</footer>
+
+				<!-- JAVASCRIPT -->
+				<!-- Libraries -->
+				<script src="assets/resources/aos/aos.js"></script>
+				<!-- Code -->
+				<script src="assets/js/material.js"></script>
+				<script src="assets/js/nProgress.js"></script>
+				<script src="assets/js/loader.js"></script>
+				<script src="assets/js/scrollspy.js"></script>
+				<script src="assets/js/header.js"></script>
+				<script src="assets/js/nixe.js"></script>
+				<script src="assets/js/typewriter.js"></script>
+				<script src="assets/js/fadeSlider.js"></script>
+				<script src="assets/js/blog.js"></script>
+				<script src="assets/js/year.js"></script>
+				<script src="assets/js/main.js"></script>
+			</body>
+			</html>

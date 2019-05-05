@@ -1,15 +1,26 @@
 // LOADING
+.loader-nixe {
+	@extend %loader-box;
+	&-sprite {
+		background-image: url('../img/sprites/loading-nixe.png');
+		background-position: 0 0;
+		width: 160px;
+		height: 240px;
+		animation: sprite-nixe 5s steps(44, end) forwards;
+	}
+}
+
+// Animation
+@keyframes sprite-nixe {
+	100% { 
+		background-position: -7040px;
+	}
+}
 
 .loader {
-	position: fixed;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	z-index: 100;
-	width: 100%;
-	height: 100%;
-	background-color: $light;
-	transition: 1s;
+	@extend %loader-box;
+	opacity: 0;
+	display: none;
 	&-container {
 		position: relative;
 		width: 100px;

@@ -60,6 +60,11 @@ const blogLeerMas = new Blog({
 	btnLeerMas: '.btn-leer-mas'
 });
 
+//year
+const year=new Year({
+	id: 'year'
+})
+
 // ON LOAD
 window.addEventListener('load', function(){
 	// Loader
@@ -98,6 +103,9 @@ window.addEventListener('DOMContentLoaded', function(){
 
 	// BLog Leer más
 	blogLeerMas.init(scrollspy);
+
+	// Year
+	year.getYear();
 });
 
 // MEDIA QUERIES
