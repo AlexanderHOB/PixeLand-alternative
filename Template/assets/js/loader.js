@@ -2,18 +2,36 @@
 
 // Loader
 class Loader {
-	marker = 0;
+	markerOne = 0;
+	markerTwo = 0;
 	constructor(object) {
 		this.loader = document.getElementById(object.id);
 		this.nixe = document.querySelector(object.nixe);
 	}
 
-	nixeDone() {
+	nixeLoad(){
+		setTimeout(()=>{
+			if(this.markerTwo != 0){
+				this.nixeDone();
+			}else {
+				window.addEventListener('load', function(){
+					this.nixeDone();
+				});
+			}
+			
+		}, 5000);
+	}
+
+	changeMarker(){
+		this.markerTwo++;
+	}
+
+	nixeDone(){
 		this.nixe.style.opacity = '0';
 		setTimeout(()=>{
 			this.nixe.style.display = 'none';
 		}, 1000);
-		this.marker = 1;
+		this.markerOne = 1;
 	}
 
 	done() {
@@ -25,7 +43,7 @@ class Loader {
 	};
 
 	start(){
-		if(this.marker == 1){
+		if(this.markerOne == 1){
 			NProgress.start();
 			this.loader.style.display = 'flex';
 			this.loader.style.opacity = '1';

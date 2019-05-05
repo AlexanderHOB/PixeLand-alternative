@@ -1,6 +1,8 @@
 // LOADING
 .loader-nixe {
+	display: flex;
 	@extend %loader-box;
+	z-index: 110;
 	&-sprite {
 		background-image: url('../img/sprites/loading-nixe.png');
 		background-position: 0 0;
@@ -18,9 +20,10 @@
 }
 
 .loader {
-	@extend %loader-box;
-	opacity: 0;
 	display: none;
+	@extend %loader-box;
+	z-index: 100;
+	opacity: 0;
 	&-container {
 		position: relative;
 		width: 100px;

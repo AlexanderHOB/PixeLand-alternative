@@ -54,7 +54,7 @@
 			& .service-description {
 				visibility: visible;
 				opacity: 1;
-				transform: translateY(100%);
+				transform: translateY(0);
 			}
 		} 
 		@include desktop($bp-sm-4) {
@@ -92,15 +92,14 @@
 		position: absolute;
 		z-index: 51;
 		left: 0;
-		top: 0;
-		bottom: 0;
+		top: 100%;
 		right: 0;
 		background-color: $dark;
 		padding: 20px;
 		border-radius: 4px;
 		visibility: hidden;
 		opacity: 0;
-		transform: translateY(125%);
+		transform: translateY(50px);
 		transition: .5s;
 		&:before {
 			content: '';
@@ -116,13 +115,13 @@
 	&-background-top {
 		@extend %service-background;
 		background-image: url(../img/services/service-background-top.svg);
-		top:0;
+		top: 0;
 		transform: translateY(-1px);
 	}
 	&-background-bottom {
 		@extend %service-background;
 		background-image: url(../img/services/service-background-bottom.svg);
-		bottom:0;
+		bottom: 0;
 		transform: translateY(1px);
 	}
 }

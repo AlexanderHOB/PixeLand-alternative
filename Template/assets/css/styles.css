@@ -1,3 +1,10 @@
+.loader-nixe {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  z-index: 110;
+}
+
 .loader-nixe-sprite {
   background-image: url("../img/sprites/loading-nixe.png");
   background-position: 0 0;
@@ -20,8 +27,9 @@
 }
 
 .loader {
-  opacity: 0;
   display: none;
+  z-index: 100;
+  opacity: 0;
 }
 
 .loader-container {
@@ -225,16 +233,12 @@ a, .service-box {
 
 .loader-nixe, .loader {
   position: fixed;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   justify-content: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  z-index: 100;
   width: 100%;
   height: 100%;
   background-color: #ffffff;
@@ -1377,9 +1381,9 @@ a {
 .service-box:hover .service-description {
   visibility: visible;
   opacity: 1;
-  -webkit-transform: translateY(100%);
-  -ms-transform: translateY(100%);
-  transform: translateY(100%);
+  -webkit-transform: translateY(0);
+  -ms-transform: translateY(0);
+  transform: translateY(0);
 }
 
 @media only screen and (max-width: 959px) {
@@ -1430,17 +1434,16 @@ a {
   position: absolute;
   z-index: 51;
   left: 0;
-  top: 0;
-  bottom: 0;
+  top: 100%;
   right: 0;
   background-color: #212121;
   padding: 20px;
   border-radius: 4px;
   visibility: hidden;
   opacity: 0;
-  -webkit-transform: translateY(125%);
-  -ms-transform: translateY(125%);
-  transform: translateY(125%);
+  -webkit-transform: translateY(50px);
+  -ms-transform: translateY(50px);
+  transform: translateY(50px);
   -webkit-transition: .5s;
   -o-transition: .5s;
   transition: .5s;
@@ -1960,43 +1963,40 @@ a {
 .contactanos-image-message-1 {
   right: 10%;
   bottom: 10%;
-  -webkit-transform: rotate(-15deg);
-  -ms-transform: rotate(-15deg);
-  transform: rotate(-15deg);
   -webkit-filter: grayscale(100%);
   filter: grayscale(100%);
   opacity: .5;
-  -webkit-animation: contactanos-message 5s linear alternate infinite;
-  animation: contactanos-message 5s linear alternate infinite;
+  -webkit-animation: contactanos-message 2s ease infinite;
+  animation: contactanos-message 2s ease infinite;
 }
 
 @-webkit-keyframes contactanos-message {
-  from {
-    -webkit-transform: rotate(0deg);
-    transform: rotate(0deg);
+  0% {
+    -webkit-transform: rotate(-20deg);
+    transform: rotate(-20deg);
   }
   50% {
-    -webkit-transform: rotate(-40deg);
-    transform: rotate(-40deg);
+    -webkit-transform: rotate(20deg);
+    transform: rotate(20deg);
   }
-  to {
-    -webkit-transform: rotate(40deg);
-    transform: rotate(40deg);
+  100% {
+    -webkit-transform: rotate(-20deg);
+    transform: rotate(-20deg);
   }
 }
 
 @keyframes contactanos-message {
-  from {
-    -webkit-transform: rotate(0deg);
-    transform: rotate(0deg);
+  0% {
+    -webkit-transform: rotate(-20deg);
+    transform: rotate(-20deg);
   }
   50% {
-    -webkit-transform: rotate(-40deg);
-    transform: rotate(-40deg);
+    -webkit-transform: rotate(20deg);
+    transform: rotate(20deg);
   }
-  to {
-    -webkit-transform: rotate(40deg);
-    transform: rotate(40deg);
+  100% {
+    -webkit-transform: rotate(-20deg);
+    transform: rotate(-20deg);
   }
 }
 

@@ -12,18 +12,18 @@ class FadeSlider {
 
 	init(){
 		this.autoPlay = setInterval(()=>{
-			this.showNextItem()
+			this.showNextItem();
 		}, this.interval);
 		this.sliderImgCount = this.sliderImg.length - 1;
-		this.nextItem.addEventListener('click', ()=>{
-			this.showNextItem()
+		this.nextItem.addEventListener('click', () => {
+			this.showNextItem();
 		});
-		this.previousItem.addEventListener('click', ()=>{
-			this.showPreviousItem()
+		this.previousItem.addEventListener('click', () => {
+			this.showPreviousItem();
 		});
 	}
 
-	showNextItem() {
+	showNextItem(){
 		this.sliderImg[this.sliderCount].classList.remove(this.sliderActive);
 		if (this.sliderCount < this.sliderImgCount) {
 			this.sliderCount++;
@@ -37,7 +37,7 @@ class FadeSlider {
 		}, this.interval);
 	}
 
-	showPreviousItem() {
+	showPreviousItem(){
 		this.sliderImg[this.sliderCount].classList.remove(this.sliderActive);
 		if (this.sliderCount > 0) {
 			this.sliderCount--;
