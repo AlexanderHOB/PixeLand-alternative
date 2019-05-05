@@ -108,8 +108,8 @@
 			height: 30px;
 			background-color: $dark;
 			top: -15px;
-			left: 47%;
-			transform: rotate(45deg);
+			left: 50%;
+			transform: translateX(-50%) rotate(45deg);
 		}
 	}
 	&-background-top {

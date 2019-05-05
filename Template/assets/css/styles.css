@@ -1456,10 +1456,10 @@ a {
   height: 30px;
   background-color: #212121;
   top: -15px;
-  left: 47%;
-  -webkit-transform: rotate(45deg);
-  -ms-transform: rotate(45deg);
-  transform: rotate(45deg);
+  left: 50%;
+  -webkit-transform: translateX(-50%) rotate(45deg);
+  -ms-transform: translateX(-50%) rotate(45deg);
+  transform: translateX(-50%) rotate(45deg);
 }
 
 .service-background-top {
