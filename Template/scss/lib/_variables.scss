@@ -9,8 +9,10 @@ $primary-3: #9334F2;
 
 
 // Typographys
-$roboto: 'Roboto';
-$poppins: 'Poppins';
+$roboto: 'Roboto', sans-serif;
+$poppins: 'Poppins', sans-serif;
+$itim: 'Itim', sans-serif;
+$sriracha: 'Sriracha', sans-serif; 
 $font-awesome: "Font Awesome 5 Free";
 
 
@@ -49,13 +51,8 @@ $text-blue: $blue;
 $link-primary: $primary-1;
 
 // Fonts
-$font-primary: 'Itim';
-
-// $font-title: 'Just Another Hand'; 
-$font-title: 'Sriracha'; 
-// $font-title: 'Baloo Bhaijaan'; 
-// $font-title: 'Sofadi One'; 
-// $font-title: 'Ranga'; 
+$font-primary: $itim;
+$font-title: $sriracha; 
 
 $font-text: $poppins;
 

@@ -211,8 +211,6 @@
 .primaryContent {
 	color: $text-light;
 	&-title {
-		margin-bottom: 8px;
-		text-transform: uppercase;
 		@extend %title-1;
 	}
 	&-container {
@@ -221,9 +219,6 @@
 	}
 	&-text {
 		@extend %text-1;
-	}
-	&-branch {
-		font-weight: 600;	
 	}
 	&-effect {
 		color: $yellow;

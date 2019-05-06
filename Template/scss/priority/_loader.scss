@@ -102,7 +102,7 @@
 .nprogress {
 	pointer-events: none;
 	.bar {
-		background: $light-blue;
+		background: $primary-1;
 		position: fixed;
 		z-index: 101;
 		top: 0;
@@ -117,7 +117,7 @@
 		right: 0;
 		width: 100px;
 		height: 100%;
-		box-shadow: 0 0 10px $light-blue, 0 0 5px $light-blue;
+		box-shadow: 0 0 10px $primary-1, 0 0 5px $primary-1;
 		opacity: 1;
 		transform: rotate(3deg) translate(0px, -4px);
 	}

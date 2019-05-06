@@ -1,7 +1,9 @@
 // CLIENTES
 .clientes {
 	@extend %layout-center;
-	@extend %sec-p;
+	@include desktop($bp-lg){
+		padding-top: 80px;
+	}
 	&-wrapper {
 		@extend %container;
 	}

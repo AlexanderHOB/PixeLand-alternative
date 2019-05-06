@@ -15,7 +15,7 @@ class FadeSlider {
 			this.showNextItem();
 		}, this.interval);
 		this.sliderImgCount = this.sliderImg.length - 1;
-		this.nextItem.addEventListener('click', () => {
+		this.nextItem.addEventListener('click', ()=>{
 			this.showNextItem();
 		});
 		this.previousItem.addEventListener('click', () => {

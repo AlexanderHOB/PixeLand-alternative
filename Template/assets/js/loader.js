@@ -14,11 +14,8 @@ class Loader {
 			if(this.markerTwo != 0){
 				this.nixeDone();
 			}else {
-				window.addEventListener('load', function(){
-					this.nixeDone();
-				});
+				window.addEventListener('load', this.nixeDone());
 			}
-			
 		}, 4000);
 	}
 

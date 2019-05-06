@@ -123,7 +123,7 @@
 .nprogress {
   pointer-events: none; }
   .nprogress .bar {
-    background: #03a9f4;
+    background: #7c32ff;
     position: fixed;
     z-index: 101;
     top: 0;
@@ -137,8 +137,8 @@
     right: 0;
     width: 100px;
     height: 100%;
-    -webkit-box-shadow: 0 0 10px #03a9f4, 0 0 5px #03a9f4;
-    box-shadow: 0 0 10px #03a9f4, 0 0 5px #03a9f4;
+    -webkit-box-shadow: 0 0 10px #7c32ff, 0 0 5px #7c32ff;
+    box-shadow: 0 0 10px #7c32ff, 0 0 5px #7c32ff;
     opacity: 1;
     -webkit-transform: rotate(3deg) translate(0px, -4px);
     -ms-transform: rotate(3deg) translate(0px, -4px);
@@ -215,7 +215,7 @@ button {
   text-shadow: 0 0 2px #7c32ff; }
 
 body {
-  font-family: "Poppins", sans-serif;
+  font-family: "Poppins", sans-serif, sans-serif;
   color: #212121; }
   body::-webkit-scrollbar {
     width: 12px;
@@ -284,3 +284,10 @@ a {
     background-color: rgba(33, 150, 243, 0.7); }
   .waves .waves-ripple {
     z-index: -1; }
+
+.PixeLand {
+  font-weight: 600; }
+
+.messenger-chat {
+  position: relative;
+  z-index: 80; }
