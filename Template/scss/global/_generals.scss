@@ -1,10 +1,13 @@
 // GENERAL
-
 *,
 *:before,
 *:after {
 	box-sizing: border-box;
 	scroll-behavior: smooth;
+}
+::selection{
+	background-color: transparent;
+	text-shadow: 0 0 2px $primary-1;
 }
 body {
 	font-family: $poppins, sans-serif;

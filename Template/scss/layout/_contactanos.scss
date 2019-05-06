@@ -1,133 +1,135 @@
-// CONTACTANOS// CONTACTANOS
-
+// CONTACTANOS
 .contactanos {
-    position: relative;
-    
     @extend %layout-center;
-    @include desktop($bp-lg){
-        padding-top: 100px; 
-    }
+    @extend %sec-p;
     &-wrapper {
+        position: relative;
         @extend %container;
         display: flex;
         align-items: center;
         flex-flow: wrap column;
     }
+    &-title {
+        @extend %title-2;
+        color: $primary-1;
+        @include desktop($bp-sm){
+            font-size: 2em;
+        }
+    }
+    &-text {
+        @extend %text-2;
+        padding-bottom: 50px;
+    }
+    &-form {
+        width: 70%;
+        display: grid;
+        grid-gap: 25px;
+        grid-template-columns: repeat(3,1fr);
+        @include desktop($bp-xs){
+            width: 100%;
+            display: flex;
+            flex-flow: wrap column;
+        }
+        &-group {
+            &:nth-of-type(4){
+                grid-column: span 4;
+            }
+            width: 100%;
+            margin-bottom: 24px;
+            position: relative;
+            & label {
+                color: $gray;
+                position: absolute;
+                top:0;
+                left:0;
+                padding: 10px 0;
+                font-size: 18px;
+                transition: .4s;
+                cursor: text;
+                pointer-events: none;
+            }     
+            & input {
+                background: transparent;
+                outline: none;
+                border: none;
+                display: block;
+                padding-top: 10px;
+                padding-bottom: 10px;
+                width: 100%;
+                color: $dark;
+                font-size: 16px;
+                border-bottom: 1.2px solid $divider;
+                &:focus ~ label, &:valid ~ label {
+                    top: -24px;
+                    font-size: 14px;
+                    color: $primary-1;
+                }
+                &:focus, &:valid {
+                    border-bottom: 1.2px solid $primary-1;
+                }
+            }
+            & input[type=number]::-webkit-inner-spin-button, 
+            & input[type=number]::-webkit-outer-spin-button {
+                -webkit-appearance: none; 
+            }
+            &:nth-child(4){
+                @include mobile($bp-xs){
+                    padding-right: 25px;
+                }
+            }
+        }
+        &-submit {
+            text-align: center;
+            grid-column-start: 2;
+            & button {
+                @extend %btn-effect;
+            }
+        }
+    }
     &-image-nux {
         position: absolute;
         width:200px;
         height: 200px;
-        right:10%;
-        bottom: 10%;
+        bottom: 0;
+        right: 0;
         filter:grayscale(100%);
-        opacity: .5;
+        opacity: .25;
         background-image: url(../img/contactanos/cartero.png);
+        @include mobile($bp-md){
+            opacity: .5;
+        }
+        @include mobile($bp-md-2){
+            filter:grayscale(20%);
+            opacity: 1;
+        }
     }
     &-image-message {
-        &-1{
+        &-1 {
             @extend %contactanos-image-message;
-            right:10%;
-            bottom: 10%;
+            bottom: 0;
+            right: 10px;
             filter:grayscale(100%);
-            opacity: .5;
+            opacity: .25;
             animation: contactanos-message 2s ease infinite;
-        }
-        @keyframes contactanos-message {
-         0%{
-            transform: rotate(-20deg);
-        }
-        50%{
-            transform: rotate(20deg);
-        }
-        100%{
-            transform: rotate(-20deg);
+            @include mobile($bp-md){
+                opacity: .5;
+            }
+            @include mobile($bp-md-2){
+                filter:grayscale(20%);
+                opacity: 1;
+            }
         }
     }
-
 }
 
-&-title {
-    @extend %title-2;
-    color: $primary-1;
-    @include desktop($bp-sm){
-        font-size: 2em;
-    }
+@keyframes contactanos-message {
+ 0%{
+    transform: rotate(-10deg);
 }
-&-text {
-    @extend %text-2;
+50%{
+    transform: rotate(10deg);
 }
-&-form {
-    width: 80%;
-    margin-top: 35px;
-    display: grid;
-    grid-gap: 25px;
-    grid-template-columns: repeat(3,1fr);
-    @include desktop($bp-xs){
-        width: 100%;
-        display: flex;
-        flex-flow: wrap column;
-    }
-    &-group {
-        &:nth-of-type(4){
-            grid-column: span 4;
-        }
-        width: 100%;
-        margin-bottom: 24px;
-        position: relative;
-        & label {
-            color: $gray;
-            position: absolute;
-            top:0;
-            left:0;
-            padding: 10px 0;
-            font-size: 18px;
-            transition: .4s;
-            cursor: text;
-            pointer-events: none;
-        }     
-        & input {
-            background: transparent;
-            outline: none;
-            border: none;
-            display: block;
-            padding-top: 10px;
-            padding-bottom: 10px;
-            width: 100%;
-            color: #000;
-            font-size: 16px;
-            border-bottom: 1.2px solid $divider;
-            &:focus ~ label, &:valid ~ label {
-                top: -24px;
-                font-size: 14px;
-                color: $primary-1;
-            }
-            &:focus, &:valid {
-                border-bottom: 1.2px solid $primary-1;
-            }
-        }
-        & input[type=number]::-webkit-inner-spin-button, 
-        & input[type=number]::-webkit-outer-spin-button {
-            -webkit-appearance: none; 
-        }
-        &:nth-child(4){
-            @include mobile($bp-xs){
-                padding-right: 25px;
-            }
-        }
-    }
-    &-submit {
-        text-align: center;
-        grid-column-start: 2;
-        & button {
-            @extend %btn-effect;
-        }
-    }
+100%{
+    transform: rotate(-10deg);
 }
-}
-//placeholder
-%contactanos-image-message{
-    background-image: url(../img/contactanos/carta.png);
-    width: 60px;
-    height: 40px;
-    position: absolute;
 }

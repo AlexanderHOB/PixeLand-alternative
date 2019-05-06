@@ -134,10 +134,11 @@
 // LAYOUT
 // Services
 %service-background {
-	width: 100%;
+	width: calc(100% + 1px);
 	height: 200px;
 	background-size: cover;
 	position: absolute;
+	left: -1px;
 	background-repeat: repeat-x;
 }
 
@@ -148,4 +149,12 @@
 	font-weight: 700;
 	white-space: nowrap;
 	color: $light;
+}
+
+// Contactanos
+%contactanos-image-message{
+	background-image: url(../img/contactanos/carta.png);
+	width: 60px;
+	height: 40px;
+	position: absolute;
 }

@@ -19,7 +19,7 @@ class Loader {
 				});
 			}
 			
-		}, 5000);
+		}, 4000);
 	}
 
 	changeMarker(){

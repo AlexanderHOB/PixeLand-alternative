@@ -1,21 +1,33 @@
 // LOADING
 .loader-nixe {
 	display: flex;
+	flex-direction: column;
 	@extend %loader-box;
 	z-index: 110;
 	&-sprite {
 		background-image: url('../img/sprites/loading-nixe.png');
-		background-position: 0 0;
 		width: 160px;
 		height: 240px;
-		animation: sprite-nixe 5s steps(44, end) forwards;
+		animation: sprite-nixe 4s steps(47, end) forwards;
+	}
+	&-text {
+		background-image: url('../img/sprites/loading-text.png');
+		width: 240px;
+		height: 60px;
+		animation: sprite-text 1s steps(3, end) infinite;
+		transform: translateY(-30px);
 	}
 }
 
 // Animation
 @keyframes sprite-nixe {
 	100% { 
-		background-position: -7040px;
+		background-position: -7520px;
+	}
+}
+@keyframes sprite-text {
+	100% { 
+		background-position: -720px;
 	}
 }
 

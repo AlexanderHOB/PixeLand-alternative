@@ -1,8 +1,8 @@
 // PORTAFOLIO
-
 .portafolio {
 	@extend %sec-p;
 	&-wrapper {
+		position: relative;
 		@extend %container;
 	}
 	&-title {
@@ -11,7 +11,27 @@
 	}
 	&-text {
 		@extend %text-2;
-		padding-bottom: 0;
+		padding-bottom: 50px;
+	}
+	&-nixe {
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		width: 50px;
+		transform: translateY(20px);
+		@include mobile($bp-xs-3){
+			width: 60px;
+		}
+		@include mobile($bp-xs-4){
+			width: 80px;
+		}
+		@include mobile($bp-xs){
+			width: 100px;
+			transform: translateY(50px);
+		}
+		@include mobile($bp-sm){
+			width: 128px;
+		}
 	}
 }
 
@@ -22,7 +42,6 @@
 	min-width: 200px;
 	margin-left: auto;
 	margin-right: auto;
-	margin-top: 50px;
 	&-mask {
 		position: relative;
 		z-index: 32;

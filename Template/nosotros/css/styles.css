@@ -2,22 +2,42 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
   z-index: 110; }
   .loader-nixe-sprite {
     background-image: url("../img/sprites/loading-nixe.png");
-    background-position: 0 0;
     width: 160px;
     height: 240px;
-    -webkit-animation: sprite-nixe 5s steps(44, end) forwards;
-    animation: sprite-nixe 5s steps(44, end) forwards; }
+    -webkit-animation: sprite-nixe 4s steps(47, end) forwards;
+    animation: sprite-nixe 4s steps(47, end) forwards; }
+  .loader-nixe-text {
+    background-image: url("../img/sprites/loading-text.png");
+    width: 240px;
+    height: 60px;
+    -webkit-animation: sprite-text 1s steps(3, end) infinite;
+    animation: sprite-text 1s steps(3, end) infinite;
+    -webkit-transform: translateY(-30px);
+    -ms-transform: translateY(-30px);
+    transform: translateY(-30px); }
 
 @-webkit-keyframes sprite-nixe {
   100% {
-    background-position: -7040px; } }
+    background-position: -7520px; } }
 
 @keyframes sprite-nixe {
   100% {
-    background-position: -7040px; } }
+    background-position: -7520px; } }
+
+@-webkit-keyframes sprite-text {
+  100% {
+    background-position: -720px; } }
+
+@keyframes sprite-text {
+  100% {
+    background-position: -720px; } }
 
 .loader {
   display: none;
@@ -185,6 +205,14 @@ button {
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
   scroll-behavior: smooth; }
+
+::-moz-selection {
+  background-color: transparent;
+  text-shadow: 0 0 2px #7c32ff; }
+
+::selection {
+  background-color: transparent;
+  text-shadow: 0 0 2px #7c32ff; }
 
 body {
   font-family: "Poppins", sans-serif;

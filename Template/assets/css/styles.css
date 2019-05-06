@@ -2,27 +2,53 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
   z-index: 110;
 }
 
 .loader-nixe-sprite {
   background-image: url("../img/sprites/loading-nixe.png");
-  background-position: 0 0;
   width: 160px;
   height: 240px;
-  -webkit-animation: sprite-nixe 5s steps(44, end) forwards;
-  animation: sprite-nixe 5s steps(44, end) forwards;
+  -webkit-animation: sprite-nixe 4s steps(47, end) forwards;
+  animation: sprite-nixe 4s steps(47, end) forwards;
+}
+
+.loader-nixe-text {
+  background-image: url("../img/sprites/loading-text.png");
+  width: 240px;
+  height: 60px;
+  -webkit-animation: sprite-text 1s steps(3, end) infinite;
+  animation: sprite-text 1s steps(3, end) infinite;
+  -webkit-transform: translateY(-30px);
+  -ms-transform: translateY(-30px);
+  transform: translateY(-30px);
 }
 
 @-webkit-keyframes sprite-nixe {
   100% {
-    background-position: -7040px;
+    background-position: -7520px;
   }
 }
 
 @keyframes sprite-nixe {
   100% {
-    background-position: -7040px;
+    background-position: -7520px;
+  }
+}
+
+@-webkit-keyframes sprite-text {
+  100% {
+    background-position: -720px;
+  }
+}
+
+@keyframes sprite-text {
+  100% {
+    background-position: -720px;
   }
 }
 
@@ -227,7 +253,7 @@ a, .service-box {
   -webkit-tap-highlight-color: transparent;
 }
 
-.planes, .portafolio, .clientes, .blog {
+.planes, .portafolio, .clientes, .blog, .contactanos {
   padding-top: 100px;
 }
 
@@ -351,10 +377,11 @@ a, .service-box {
 }
 
 .service-background-top, .service-background-bottom {
-  width: 100%;
+  width: calc(100% + 1px);
   height: 200px;
   background-size: cover;
   position: absolute;
+  left: -1px;
   background-repeat: repeat-x;
 }
 
@@ -364,6 +391,13 @@ a, .service-box {
   font-weight: 700;
   white-space: nowrap;
   color: #ffffff;
+}
+
+.contactanos-image-message-1 {
+  background-image: url(../img/contactanos/carta.png);
+  width: 60px;
+  height: 40px;
+  position: absolute;
 }
 
 * {
@@ -397,6 +431,16 @@ button {
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
   scroll-behavior: smooth;
+}
+
+::-moz-selection {
+  background-color: transparent;
+  text-shadow: 0 0 2px #7c32ff;
+}
+
+::selection {
+  background-color: transparent;
+  text-shadow: 0 0 2px #7c32ff;
 }
 
 body {
@@ -1438,7 +1482,7 @@ a {
   right: 0;
   background-color: #212121;
   padding: 20px;
-  border-radius: 4px;
+  border-radius: 12px;
   visibility: hidden;
   opacity: 0;
   -webkit-transform: translateY(50px);
@@ -1613,12 +1657,53 @@ a {
   border-right: 15px solid #7c32ff;
 }
 
+.portafolio-wrapper {
+  position: relative;
+}
+
 .portafolio-title {
   color: #c738d8;
 }
 
 .portafolio-text {
-  padding-bottom: 0;
+  padding-bottom: 50px;
+}
+
+.portafolio-nixe {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 50px;
+  -webkit-transform: translateY(20px);
+  -ms-transform: translateY(20px);
+  transform: translateY(20px);
+}
+
+@media only screen and (min-width: 400px) {
+  .portafolio-nixe {
+    width: 60px;
+  }
+}
+
+@media only screen and (min-width: 480px) {
+  .portafolio-nixe {
+    width: 80px;
+  }
+}
+
+@media only screen and (min-width: 576px) {
+  .portafolio-nixe {
+    width: 100px;
+    -webkit-transform: translateY(50px);
+    -ms-transform: translateY(50px);
+    transform: translateY(50px);
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .portafolio-nixe {
+    width: 128px;
+  }
 }
 
 .slider {
@@ -1627,7 +1712,6 @@ a {
   min-width: 200px;
   margin-left: auto;
   margin-right: auto;
-  margin-top: 50px;
 }
 
 .slider-mask {
@@ -1925,17 +2009,8 @@ a {
   }
 }
 
-.contactanos {
-  position: relative;
-}
-
-@media only screen and (max-width: 1199px) {
-  .contactanos {
-    padding-top: 100px;
-  }
-}
-
 .contactanos-wrapper {
+  position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1948,58 +2023,6 @@ a {
   flex-flow: wrap column;
 }
 
-.contactanos-image-nux {
-  position: absolute;
-  width: 200px;
-  height: 200px;
-  right: 10%;
-  bottom: 10%;
-  -webkit-filter: grayscale(100%);
-  filter: grayscale(100%);
-  opacity: .5;
-  background-image: url(../img/contactanos/cartero.png);
-}
-
-.contactanos-image-message-1 {
-  right: 10%;
-  bottom: 10%;
-  -webkit-filter: grayscale(100%);
-  filter: grayscale(100%);
-  opacity: .5;
-  -webkit-animation: contactanos-message 2s ease infinite;
-  animation: contactanos-message 2s ease infinite;
-}
-
-@-webkit-keyframes contactanos-message {
-  0% {
-    -webkit-transform: rotate(-20deg);
-    transform: rotate(-20deg);
-  }
-  50% {
-    -webkit-transform: rotate(20deg);
-    transform: rotate(20deg);
-  }
-  100% {
-    -webkit-transform: rotate(-20deg);
-    transform: rotate(-20deg);
-  }
-}
-
-@keyframes contactanos-message {
-  0% {
-    -webkit-transform: rotate(-20deg);
-    transform: rotate(-20deg);
-  }
-  50% {
-    -webkit-transform: rotate(20deg);
-    transform: rotate(20deg);
-  }
-  100% {
-    -webkit-transform: rotate(-20deg);
-    transform: rotate(-20deg);
-  }
-}
-
 .contactanos-title {
   color: #7c32ff;
 }
@@ -2010,9 +2033,12 @@ a {
   }
 }
 
+.contactanos-text {
+  padding-bottom: 50px;
+}
+
 .contactanos-form {
-  width: 80%;
-  margin-top: 35px;
+  width: 70%;
   display: -ms-grid;
   display: grid;
   grid-gap: 25px;
@@ -2066,7 +2092,7 @@ a {
   padding-top: 10px;
   padding-bottom: 10px;
   width: 100%;
-  color: #000;
+  color: #212121;
   font-size: 16px;
   border-bottom: 1.2px solid #bdbdbd;
 }
@@ -2098,11 +2124,84 @@ a {
   grid-column-start: 2;
 }
 
-.contactanos-image-message-1 {
-  background-image: url(../img/contactanos/carta.png);
-  width: 60px;
-  height: 40px;
+.contactanos-image-nux {
   position: absolute;
+  width: 200px;
+  height: 200px;
+  bottom: 0;
+  right: 0;
+  -webkit-filter: grayscale(100%);
+  filter: grayscale(100%);
+  opacity: .25;
+  background-image: url(../img/contactanos/cartero.png);
+}
+
+@media only screen and (min-width: 992px) {
+  .contactanos-image-nux {
+    opacity: .5;
+  }
+}
+
+@media only screen and (min-width: 1280px) {
+  .contactanos-image-nux {
+    -webkit-filter: grayscale(20%);
+    filter: grayscale(20%);
+    opacity: 1;
+  }
+}
+
+.contactanos-image-message-1 {
+  bottom: 0;
+  right: 10px;
+  -webkit-filter: grayscale(100%);
+  filter: grayscale(100%);
+  opacity: .25;
+  -webkit-animation: contactanos-message 2s ease infinite;
+  animation: contactanos-message 2s ease infinite;
+}
+
+@media only screen and (min-width: 992px) {
+  .contactanos-image-message-1 {
+    opacity: .5;
+  }
+}
+
+@media only screen and (min-width: 1280px) {
+  .contactanos-image-message-1 {
+    -webkit-filter: grayscale(20%);
+    filter: grayscale(20%);
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes contactanos-message {
+  0% {
+    -webkit-transform: rotate(-10deg);
+    transform: rotate(-10deg);
+  }
+  50% {
+    -webkit-transform: rotate(10deg);
+    transform: rotate(10deg);
+  }
+  100% {
+    -webkit-transform: rotate(-10deg);
+    transform: rotate(-10deg);
+  }
+}
+
+@keyframes contactanos-message {
+  0% {
+    -webkit-transform: rotate(-10deg);
+    transform: rotate(-10deg);
+  }
+  50% {
+    -webkit-transform: rotate(10deg);
+    transform: rotate(10deg);
+  }
+  100% {
+    -webkit-transform: rotate(-10deg);
+    transform: rotate(-10deg);
+  }
 }
 
 .footer {
