@@ -245,7 +245,7 @@
 }
 
 button,
-a, .service-box {
+a, .service-box, .plan-content-features ul li {
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
@@ -1389,9 +1389,9 @@ a {
   -webkit-transform: scaleX(0);
   -ms-transform: scaleX(0);
   transform: scaleX(0);
-  -webkit-transition: 0.5s;
-  -o-transition: 0.5s;
-  transition: 0.5s;
+  -webkit-transition: .5s;
+  -o-transition: .5s;
+  transition: .5s;
 }
 
 .services-title:hover:before {
@@ -1436,19 +1436,6 @@ a {
   text-align: center;
 }
 
-.service-box:hover .service-icon {
-  background-color: #ffffff;
-  color: #9334F2;
-}
-
-.service-box:hover .service-description {
-  visibility: visible;
-  opacity: 1;
-  -webkit-transform: translateY(0);
-  -ms-transform: translateY(0);
-  transform: translateY(0);
-}
-
 @media only screen and (max-width: 959px) {
   .service-box {
     width: 45%;
@@ -1491,13 +1478,17 @@ a {
   font-size: 26px;
 }
 
+.service-icon:hover {
+  background-color: #ffffff;
+  color: #9334F2;
+}
+
 .service-title {
   font-size: 24px;
   font-family: "Itim", sans-serif;
 }
 
 .service-description {
-  font-size: 16px;
   position: absolute;
   z-index: 51;
   left: 0;
@@ -1527,6 +1518,14 @@ a {
   -webkit-transform: translateX(-50%) rotate(45deg);
   -ms-transform: translateX(-50%) rotate(45deg);
   transform: translateX(-50%) rotate(45deg);
+}
+
+.service-icon:hover ~ .service-description {
+  visibility: visible;
+  opacity: 1;
+  -webkit-transform: translateY(0);
+  -ms-transform: translateY(0);
+  transform: translateY(0);
 }
 
 .service-background-top {
@@ -1649,7 +1648,7 @@ a {
 .plan-content-title h3 {
   padding-bottom: 8px;
   font-family: "Itim", sans-serif;
-  font-size: 24px;
+  font-size: 30px;
   font-weight: 700;
 }
 

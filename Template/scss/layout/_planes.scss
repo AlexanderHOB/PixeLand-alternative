@@ -63,7 +63,7 @@
         & h3 {
             padding-bottom: 8px;
             font-family: $font-primary;
-            font-size: 24px;
+            font-size: 30px;
             font-weight: 700;
         }
         & h4 {
@@ -84,6 +84,7 @@
                 transition: .5s;
                 border-left: 10px solid transparent;
                 border-right: 10px solid transparent;
+                @extend %tap-highlight;
                 &:hover {
                     border-left: 15px solid $primary-1;
                     border-right: 15px solid $primary-1;

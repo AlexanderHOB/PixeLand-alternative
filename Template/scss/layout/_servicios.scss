@@ -6,7 +6,6 @@
 	padding-top: 250px;
 	padding-bottom: 250px;
 	color: $light;
-	// overflow: hidden;
 	&-wrapper {
 		@extend %container;
 	}
@@ -23,7 +22,7 @@
 			height: 2px;
 			background-color: $light;
 			transform: scaleX(0);
-			transition: 0.5s;
+			transition: .5s;
 		}
 		&:hover:before {
 			transform: scaleX(.4);
@@ -52,17 +51,6 @@
 		margin-top: 50px;
 		text-align: center;		
 		@extend %tap-highlight;
-		&:hover {
-			& .service-icon {
-				background-color: $light;
-				color: $primary-3;
-			}
-			& .service-description {
-				visibility: visible;
-				opacity: 1;
-				transform: translateY(0);
-			}
-		} 
 		@include desktop($bp-sm-4) {
 			width: 45%;
 		}
@@ -86,13 +74,16 @@
 		& i {
 			font-size: 26px;
 		}
+		&:hover {
+			background-color: $light;
+			color: $primary-3;
+		}
 	}
 	&-title {
 		font-size: 24px;
 		font-family: $font-primary;
 	}
 	&-description {
-		font-size: 16px;
 		position: absolute;
 		z-index: 51;
 		left: 0;
@@ -116,6 +107,11 @@
 			transform: translateX(-50%) rotate(45deg);
 		}
 	}
+	&-icon:hover ~ &-description {
+		visibility: visible;
+		opacity: 1;
+		transform: translateY(0);
+	} 
 	&-background-top {
 		@extend %service-background;
 		background-image: url(../img/services/service-background-top.svg);
