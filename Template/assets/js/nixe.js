@@ -1,10 +1,10 @@
 // NIXE
 class Nixe {
-	contador = 0;
 	constructor(object){
 		this.nixe = document.querySelector(object.nixe);
 		this.nixeImg1 = object.nixeImg1;
 		this.nixeImg2 = object.nixeImg2;
+		this.contador = 0;
 	}
 
 	changeValues(object) {

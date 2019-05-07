@@ -1,10 +1,10 @@
 // HEADER
 
 class Header {
-	contador = 0;
 	constructor(object){
 		this.header = document.querySelector(object.header);
 		this.active = object.active;
+		this.contador = 0;
 	}
 
 	scroll() {

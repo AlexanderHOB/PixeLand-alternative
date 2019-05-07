@@ -1,14 +1,13 @@
 class Blog {
-	postTextBackUp = [];
-	postTextNew = [];
-	postTextCount= [];
-	postTextIndex = 0;
-	postTextIndexCount = 0;
-	postBtnCount = [];
-
 	constructor(object){
 		this.postText = document.querySelectorAll(object.blogPostText),
 		this.postBtn = document.querySelectorAll(object.btnLeerMas);
+		this.postTextBackUp = [];
+		this.postTextNew = [];
+		this.postTextCount= [];
+		this.postTextIndex = 0;
+		this.postTextIndexCount = 0;
+		this.postBtnCount = [];
 	}
 
 	init(scrollspy){

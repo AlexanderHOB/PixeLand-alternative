@@ -1,13 +1,13 @@
 class FadeSlider {
-	sliderCount = 0;
-	sliderIndex = 0;
-	controllerIndex = 0;
 	constructor(object){
 		this.sliderImg = document.querySelectorAll(object.sliderImg),
 		this.nextItem = document.querySelector(object.nextItem),
 		this.previousItem = document.querySelector(object.previousItem),
 		this.interval = object.interval;
 		this.sliderActive = object.sliderActive;
+		this.sliderCount = 0;
+		this.sliderIndex = 0;
+		this.controllerIndex = 0;
 	}
 
 	init(){

@@ -2,11 +2,11 @@
 
 // Loader
 class Loader {
-	markerOne = 0;
-	markerTwo = 0;
 	constructor(object) {
 		this.loader = document.getElementById(object.id);
 		this.nixe = document.querySelector(object.nixe);
+		this.markerOne = 0;
+		this.markerTwo = 0;
 	}
 
 	nixeLoad(){

@@ -1,12 +1,12 @@
 // Scrollspy
 
 class Scrollspy {
-	sections = [];
 
 	constructor(object) {
 		this.header = document.querySelector(object.header),
 		this.section = document.querySelectorAll(object.sections);
 		this.active = object.active;
+		this.sections = [];
 	}
 
 	init() {
