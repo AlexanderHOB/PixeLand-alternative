@@ -2040,6 +2040,7 @@ a {
 
 .contactanos-wrapper {
   position: relative;
+  z-index: 1;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -2153,12 +2154,15 @@ a {
   grid-column-start: 2;
 }
 
-.contactanos-image-nux {
+.contactanos-image {
   position: absolute;
-  width: 200px;
-  height: 200px;
   bottom: 0;
   right: 0;
+}
+
+.contactanos-image-nixe {
+  width: 200px;
+  height: 200px;
   -webkit-filter: grayscale(100%);
   filter: grayscale(100%);
   opacity: .25;
@@ -2166,13 +2170,13 @@ a {
 }
 
 @media only screen and (min-width: 992px) {
-  .contactanos-image-nux {
+  .contactanos-image-nixe {
     opacity: .5;
   }
 }
 
 @media only screen and (min-width: 1280px) {
-  .contactanos-image-nux {
+  .contactanos-image-nixe {
     -webkit-filter: grayscale(20%);
     filter: grayscale(20%);
     opacity: 1;

@@ -4,6 +4,7 @@
     @extend %sec-p;
     &-wrapper {
         position: relative;
+        z-index: 1;
         @extend %container;
         display: flex;
         align-items: center;
@@ -86,37 +87,40 @@
             }
         }
     }
-    &-image-nux {
+    &-image {
         position: absolute;
-        width:200px;
-        height: 200px;
         bottom: 0;
         right: 0;
-        filter:grayscale(100%);
-        opacity: .25;
-        background-image: url(../img/contactanos/cartero.png);
-        @include mobile($bp-md){
-            opacity: .5;
-        }
-        @include mobile($bp-md-2){
-            filter:grayscale(20%);
-            opacity: 1;
-        }
-    }
-    &-image-message {
-        &-1 {
-            @extend %contactanos-image-message;
-            bottom: 0;
-            right: 10px;
+        &-nixe {
+            width:200px;
+            height: 200px;
+
             filter:grayscale(100%);
             opacity: .25;
-            animation: contactanos-message 2s ease infinite;
+            background-image: url(../img/contactanos/cartero.png);
             @include mobile($bp-md){
                 opacity: .5;
             }
             @include mobile($bp-md-2){
                 filter:grayscale(20%);
                 opacity: 1;
+            }
+        }
+        &-message {
+            &-1 {
+                @extend %contactanos-image-message;
+                bottom: 0;
+                right: 10px;
+                filter:grayscale(100%);
+                opacity: .25;
+                animation: contactanos-message 2s ease infinite;
+                @include mobile($bp-md){
+                    opacity: .5;
+                }
+                @include mobile($bp-md-2){
+                    filter:grayscale(20%);
+                    opacity: 1;
+                }
             }
         }
     }

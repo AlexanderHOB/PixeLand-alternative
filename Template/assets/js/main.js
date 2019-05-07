@@ -71,6 +71,8 @@ window.addEventListener('load', function(){
 	// Loader
 	loader.changeMarker();
 
+
+
 	// Scrollspy
 	scrollspy.init();
 

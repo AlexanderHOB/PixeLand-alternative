@@ -29,6 +29,8 @@ class Loader {
 			this.nixe.style.display = 'none';
 		}, 1000);
 		this.markerOne = 1;
+		// AOS
+		AOS.init();
 	}
 
 	done() {
