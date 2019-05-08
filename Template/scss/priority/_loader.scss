@@ -17,6 +17,11 @@
 		animation: sprite-text 1s steps(3, end) infinite;
 		transform: translateY(-30px);
 	}
+	&-version {
+		position: absolute;
+		bottom: 10px;
+		right: 10px;
+	}
 }
 
 // Animation

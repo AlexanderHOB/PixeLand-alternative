@@ -122,6 +122,8 @@
 		@extend %service-background;
 		background-image: url(../img/services/service-background-bottom.svg);
 		bottom: 0;
-		transform: translateY(1px);
+		left: -5px;
+		width: calc(100% + 5px);
+		transform: translateY(2px);
 	}
 }

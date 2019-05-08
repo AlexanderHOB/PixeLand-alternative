@@ -22,6 +22,10 @@
     -webkit-transform: translateY(-30px);
     -ms-transform: translateY(-30px);
     transform: translateY(-30px); }
+  .loader-nixe-version {
+    position: absolute;
+    bottom: 10px;
+    right: 10px; }
 
 @-webkit-keyframes sprite-nixe {
   100% {
@@ -287,7 +291,3 @@ a {
 
 .PixeLand {
   font-weight: 600; }
-
-.messenger-chat {
-  position: relative;
-  z-index: 80; }

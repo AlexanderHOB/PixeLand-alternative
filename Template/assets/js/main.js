@@ -61,6 +61,16 @@ const blogLeerMas = new Blog({
 	btnLeerMas: '.btn-leer-mas'
 });
 
+// Messenger
+const messenger = new Messenger({
+	body: $body,
+	messenger: '.messenger',
+	messengerToggle: '.messenger-toggle',
+	messengerFacebookM: '.messenger-facebook-m',
+	messengerChat: '.messenger-chat'
+});
+messenger.init();
+
 //year
 const year=new Year({
 	id: 'year'
@@ -69,9 +79,7 @@ const year=new Year({
 // ON LOAD
 window.addEventListener('load', function(){
 	// Loader
-	loader.changeMarker();
-
-
+	loader.changeMarker();	
 
 	// Scrollspy
 	scrollspy.init();
@@ -108,6 +116,9 @@ window.addEventListener('DOMContentLoaded', function(){
 
 	// Year
 	year.getYear();
+
+	// Messenger
+	messenger.chatNone();
 });
 
 // MEDIA QUERIES

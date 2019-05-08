@@ -37,6 +37,7 @@
 	<div class="loader-nixe">
 		<div class="loader-nixe-sprite"></div>
 		<div class="loader-nixe-text"></div>
+		<p class="loader-nixe-version">v 1.0</p>
 	</div>
 	<!-- On Ckange -->
 	<div id="loader" class="loader">
@@ -55,7 +56,7 @@
 					<i class="fas fa-stream nav-toggle-icon"></i>
 				</button>
 				<a href="#inicio" class="brand"><div class="brand-img"></div></a>
-			</div>	
+			</div>
 
 			<!-- NAV -->
 			<nav id="sidenav" class="nav sidenav">
@@ -448,13 +449,21 @@
 		<small class="footer-copywrite">&copy; <span id="year"></span> All rights reserved - developed by <a href="www.nibbleframe.com" target="_blank" class="footer-copywrite-developers"> NibbleFrame</a></small>
 	</footer>
 
-	<!-- Load Facebook SDK for JavaScript -->
-	<div class="messenger-chat">
-		<div id="fb-root"></div>
+	<!-- MESSENGER SERVICE -->
+	<div class="messenger">
+		<a href="javascript:void(0)" class="messenger-toggle waves waves-blue"><i class="fas fa-comments messenger-toggle-icon"></i><i class="fas fa-times messenger-toggle-icon"></i></a>   
+		<span class="messenger-tooltip messenger-tooltip-toggle">Hablanos! 😉</span>
+		<a href="javascript:void(0)" class="messenger-facebook-m waves"><i class="fab fa-facebook-messenger"></i></a>
+		<span class="messenger-tooltip messenger-tooltip-facebook-m">Messenger</span>
+		<a href="https://api.whatsapp.com/send?phone=51988120494&text=Hola!%20Quiero%20innovar%20con%20su%20ayuda." class="messenger-whatsapp waves" target="_blank"><i class="fab fa-whatsapp"></i></a>
+		<span class="messenger-tooltip messenger-tooltip-whatsapp">WhatsApp</span>
+		<a href="https://m.me/TeamPixeLand" class="messenger-facebook waves" target="_blank"><i class="fab fa-facebook-f"></i></a>
+		<span class="messenger-tooltip messenger-tooltip-facebook">Facebook</span>
+		<div class="messenger-chat">
+			<p class="messenger-chat-title"><i class="fab fa-facebook-messenger messenger-chat-title-icon"></i> Facebook Messenger <i class="fas fa-times messenger-chat-title-icon"></i></p>
+			<iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2FTeamPixeLand&tabs=messages&width=300&height=300&small_header=true&adapt_container_width=true&hide_cover=false&show_facepile=false&appId=2286078465011093" width="300" height="300" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allow="encrypted-media"></iframe>
+		</div>
 	</div>
-	<script src="assets/js/messenger.js"></script>
-	<!-- Your customer chat code -->
-	<div class="fb-customerchat" attribution=setup_tool page_id="421749555054607" theme_color="#7646ff"></div>
 
 	<!-- JAVASCRIPT -->
 	<!-- Libraries -->
@@ -469,6 +478,7 @@
 	<script src="assets/js/typewriter.js"></script>
 	<script src="assets/js/fadeSlider.js"></script>
 	<script src="assets/js/blog.js"></script>
+	<script src="assets/js/messenger.js"></script>
 	<script src="assets/js/year.js"></script>
 	<script src="assets/js/main.js"></script>
 </body>

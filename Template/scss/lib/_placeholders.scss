@@ -137,11 +137,12 @@
 // LAYOUT
 // Services
 %service-background {
-	width: calc(100% + 1px);
+	position: absolute;
+	width: 100%;
 	height: 200px;
 	background-size: cover;
-	position: absolute;
-	left: -1px;
+	background-position: left;
+	left: 0;
 	background-repeat: repeat-x;
 }
 
