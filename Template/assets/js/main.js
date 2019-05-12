@@ -62,14 +62,14 @@ const blogLeerMas = new Blog({
 });
 
 // Messenger
-const messenger = new Messenger({
-	body: $body,
-	messenger: '.messenger',
-	messengerToggle: '.messenger-toggle',
-	messengerFacebookM: '.messenger-facebook-m',
-	messengerChat: '.messenger-chat'
-});
-messenger.init();
+// const messenger = new Messenger({
+// 	body: $body,
+// 	messenger: '.messenger',
+// 	messengerToggle: '.messenger-toggle',
+// 	messengerFacebookM: '.messenger-facebook-m',
+// 	messengerChat: '.messenger-chat'
+// });
+// messenger.init();
 
 //year
 const year=new Year({
@@ -118,7 +118,7 @@ window.addEventListener('DOMContentLoaded', function(){
 	year.getYear();
 
 	// Messenger
-	messenger.chatNone();
+	// messenger.chatNone();
 });
 
 // MEDIA QUERIES

@@ -156,9 +156,18 @@
 }
 
 // Contactanos
-%contactanos-image-message{
+%contactanos-image-message {
 	background-image: url(../img/contactanos/carta.png);
 	width: 60px;
 	height: 40px;
 	position: absolute;
+}
+
+// Nostros texts
+%nosotros-text {
+	position: absolute;
+	color: $text-light;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
 }

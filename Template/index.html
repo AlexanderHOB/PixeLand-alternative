@@ -138,7 +138,9 @@
 		<div class="nosotros-wrapper">
 			<h2 class="nosotros-title" data-aos="fade-up" data-aos-duration="1000">Team PixeLand</h2>
 			<p class="nosotros-content" data-aos="fade-up" data-aos-duration="1000"><strong>Somos un equipo de desarrolladores apasionados por el diseño</strong>. Nuestra mayor diferencial es la atención personalizada, el cuidado de los detalles y los tiempos de entrega en cada proyecto. 👨‍🚀</p>
-			<a href="nosotros/" class="nosotros-btn waves" data-aos="fade-up" data-aos-duration="1000">¡Conocenos!</a>
+			<div class="btnBox" data-aos="fade-up" data-aos-duration="1000">
+				<a href="nosotros/" class="nosotros-btn waves">¡Conocenos!</a>
+			</div>
 		</div>
 	</section>
 
@@ -450,7 +452,7 @@
 	</footer>
 
 	<!-- MESSENGER SERVICE -->
-	<div class="messenger">
+<!-- 	<div class="messenger">
 		<a href="javascript:void(0)" class="messenger-toggle waves waves-blue"><i class="fas fa-comments messenger-toggle-icon"></i><i class="fas fa-times messenger-toggle-icon"></i></a>   
 		<span class="messenger-tooltip messenger-tooltip-toggle">Hablanos! 😉</span>
 		<a href="javascript:void(0)" class="messenger-facebook-m waves"><i class="fab fa-facebook-messenger"></i></a>
@@ -462,6 +464,36 @@
 		<div class="messenger-chat">
 			<p class="messenger-chat-title"><i class="fab fa-facebook-messenger messenger-chat-title-icon"></i> Facebook Messenger <i class="fas fa-times messenger-chat-title-icon"></i></p>
 			<iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2FTeamPixeLand&tabs=messages&width=300&height=300&small_header=true&adapt_container_width=true&hide_cover=false&show_facepile=false&appId=2286078465011093" width="300" height="300" style="border:none;overflow:hidden" allow="encrypted-media"></iframe>
+		</div>
+	</div> -->
+
+	<!-- MessagesF -->
+	<div class="messagesF">
+		<!-- Load Facebook SDK for JavaScript -->
+		<div id="fb-root"></div>
+		<script>
+			window.fbAsyncInit = function() {
+				FB.init({
+					xfbml            : true,
+					version          : 'v3.3'
+				});
+			};
+
+			(function(d, s, id) {
+				var js, fjs = d.getElementsByTagName(s)[0];
+				if (d.getElementById(id)) return;
+				js = d.createElement(s); js.id = id;
+				js.src = 'https://connect.facebook.net/es_LA/sdk/xfbml.customerchat.js';
+				fjs.parentNode.insertBefore(js, fjs);
+			}(document, 'script', 'facebook-jssdk'));</script>
+
+			<!-- Your customer chat code -->
+			<div class="fb-customerchat"
+			attribution=setup_tool
+			page_id="421749555054607"
+			theme_color="#7c32ff"
+			logged_in_greeting="¡Hola! ¿Cómo podemos ayudarte?"
+			logged_out_greeting="¡Hola! ¿Cómo podemos ayudarte?">
 		</div>
 	</div>
 
@@ -478,7 +510,7 @@
 	<script src="assets/js/typewriter.js"></script>
 	<script src="assets/js/fadeSlider.js"></script>
 	<script src="assets/js/blog.js"></script>
-	<script src="assets/js/messenger.js"></script>
+	<!-- <script src="assets/js/messenger.js"></script> -->
 	<script src="assets/js/year.js"></script>
 	<script src="assets/js/main.js"></script>
 </body>
