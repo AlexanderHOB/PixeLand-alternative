@@ -78,8 +78,13 @@
     background-position: 12% bottom;
     background-image: url("../img/footer/footer.svg");
     background-size: cover;
+    background-repeat: repeat-x;
     @include desktop($bp-sm-1){
         background-position: 30% bottom;
+    }
+    @include mobile(1400px) {
+        background-size: initial;
+        background-position: 25% bottom;
     }
     .nixe-footer {
         position: relative;

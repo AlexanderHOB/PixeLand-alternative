@@ -160,9 +160,9 @@ a {
   width: 100%;
   height: 100%;
   background-color: #ffffff;
-  -webkit-transition: 1s;
-  -o-transition: 1s;
-  transition: 1s;
+  -webkit-transition: opacity 1s;
+  -o-transition: opacity 1s;
+  transition: opacity 1s;
 }
 
 @-webkit-keyframes btn-effect {
@@ -185,7 +185,6 @@ a {
 
 .sun-nibbleframe, .world-home {
   position: absolute;
-  color: #ffffff;
   top: 50%;
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
@@ -294,14 +293,12 @@ a {
   -webkit-transform: scale(0.9);
   -ms-transform: scale(0.9);
   transform: scale(0.9);
-  opacity: .95;
 }
 
 .sun:hover {
   -webkit-transform: scale(1);
   -ms-transform: scale(1);
   transform: scale(1);
-  opacity: 1;
 }
 
 @media only screen and (min-width: 768px) {
@@ -311,11 +308,20 @@ a {
 }
 
 .sun-nibbleframe {
+  padding-left: 8px;
   font-size: 1.2em;
+  font-family: "Sriracha", sans-serif;
+}
+
+@media only screen and (min-width: 400px) {
+  .sun-nibbleframe {
+    font-size: 1.5em;
+  }
 }
 
 @media only screen and (min-width: 480px) {
   .sun-nibbleframe {
+    padding-left: 16px;
     font-size: 2em;
   }
 }
@@ -350,6 +356,14 @@ a {
 
 .world-home {
   font-size: 2em;
+  font-family: "Itim", sans-serif;
+  color: #ffffff;
+}
+
+@media only screen and (min-width: 400px) {
+  .world-home {
+    font-size: 2.5em;
+  }
 }
 
 @media only screen and (min-width: 480px) {
@@ -361,7 +375,7 @@ a {
 .nixeAstronauta {
   position: absolute;
   left: 50%;
-  top: 60%;
+  top: 80%;
   -webkit-transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
@@ -391,24 +405,29 @@ a {
 }
 
 .nixeAstronauta-img {
-  -webkit-transform: rotate(0deg) translateX(20px) rotate(0deg);
-  -ms-transform: rotate(0deg) translateX(20px) rotate(0deg);
-  transform: rotate(0deg) translateX(20px) rotate(0deg);
-  -webkit-animation: animateNixe 2s linear infinite;
-  animation: animateNixe 2s linear infinite;
+  -webkit-animation: animateNixe 2s linear infinite alternate;
+  animation: animateNixe 2s linear infinite alternate;
 }
 
 @-webkit-keyframes animateNixe {
+  from {
+    -webkit-transform: rotate(10deg) translate(-80%) rotate(-50deg);
+    transform: rotate(10deg) translate(-80%) rotate(-50deg);
+  }
   to {
-    -webkit-transform: rotate(-360deg) translateX(20px) rotate(360deg);
-    transform: rotate(-360deg) translateX(20px) rotate(360deg);
+    -webkit-transform: rotate(180deg) translate(-80%) rotate(-180deg);
+    transform: rotate(180deg) translate(-80%) rotate(-180deg);
   }
 }
 
 @keyframes animateNixe {
+  from {
+    -webkit-transform: rotate(10deg) translate(-80%) rotate(-50deg);
+    transform: rotate(10deg) translate(-80%) rotate(-50deg);
+  }
   to {
-    -webkit-transform: rotate(-360deg) translateX(20px) rotate(360deg);
-    transform: rotate(-360deg) translateX(20px) rotate(360deg);
+    -webkit-transform: rotate(180deg) translate(-80%) rotate(-180deg);
+    transform: rotate(180deg) translate(-80%) rotate(-180deg);
   }
 }
 

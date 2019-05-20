@@ -19,18 +19,22 @@
 	width: 50%;
 	transition: .5s;
 	transform: scale(.9);
-	opacity: .95;
 	&:hover {
 		transform: scale(1);
-		opacity: 1;
 	}
 	@include mobile($bp-sm) {
 		left: 2%;
 	}
 	&-nibbleframe {
 		@extend %nosotros-text;
+		padding-left: 8px;
 		font-size: 1.2em;
+		font-family: $sriracha;
+		@include mobile($bp-xs-3){
+			font-size: 1.5em;
+		}
 		@include mobile($bp-xs-4){
+			padding-left: 16px;
 			font-size: 2em;
 		}
 	}
@@ -54,6 +58,11 @@
 	&-home {
 		@extend %nosotros-text;
 		font-size: 2em;
+		font-family: $itim;
+		color: $text-light;
+		@include mobile($bp-xs-3){
+			font-size: 2.5em;
+		}
 		@include mobile($bp-xs-4){
 			font-size: 3em;
 		}
@@ -62,7 +71,7 @@
 .nixeAstronauta {
 	position: absolute;
 	left: 50%;
-	top: 60%;
+	top: 80%;
 	transform: translate(-50%, -50%);
 	max-width: 208px;
 	max-height: 240px;
@@ -79,13 +88,19 @@
 		max-height: 499px;
 	}
 	&-img {
-		transform: rotate(0deg) translateX(20px) rotate(0deg);
-		animation: animateNixe 2s linear infinite;
+		animation: animateNixe 2s linear infinite alternate;
 	}
 }
 @keyframes animateNixe {
+	from { 
+		// transform: rotate(0)  translate(-80%) rotate(0);
+		// transform: rotate(-10deg)  translate(-80%) rotate(90deg);
+		// transform: rotate(10deg)  translate(-80%) rotate(5deg);
+		transform: rotate(10deg)  translate(-80%) rotate(-50deg);
+	}
 	to { 
-		transform: rotate(-360deg) translateX(20px) rotate(360deg); 
+		transform: rotate(180deg) translate(-80%) rotate(-180deg); 
+		// transform: rotate(180deg) translate(-80%) rotate(180deg); 
 	}
 }
 

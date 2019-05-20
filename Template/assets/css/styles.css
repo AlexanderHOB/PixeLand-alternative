@@ -274,9 +274,9 @@ a, .service-box, .plan-content-features ul li {
   width: 100%;
   height: 100%;
   background-color: #ffffff;
-  -webkit-transition: 1s;
-  -o-transition: 1s;
-  transition: 1s;
+  -webkit-transition: opacity 1s;
+  -o-transition: opacity 1s;
+  transition: opacity 1s;
 }
 
 .primaryContent-title, .nosotros-title, .services-title, .planes-title, .portafolio-title, .clientes-title, .blog-title, .contactanos-title {
@@ -2350,11 +2350,19 @@ a {
   background-position: 12% bottom;
   background-image: url("../img/footer/footer.svg");
   background-size: cover;
+  background-repeat: repeat-x;
 }
 
 @media only screen and (max-width: 599px) {
   .wave-nixe {
     background-position: 30% bottom;
+  }
+}
+
+@media only screen and (min-width: 1400px) {
+  .wave-nixe {
+    background-size: initial;
+    background-position: 25% bottom;
   }
 }
 

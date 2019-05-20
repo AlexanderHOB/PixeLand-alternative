@@ -13,7 +13,7 @@ const loader = new Loader({
 	id: 'loader',
 	nixe: '.loader-nixe'
 });
-loader.nixeLoad();
+// loader.nixeLoad();
 
 // Scrollspy
 const scrollspy = new Scrollspy({
@@ -79,7 +79,8 @@ const year=new Year({
 // ON LOAD
 window.addEventListener('load', function(){
 	// Loader
-	loader.changeMarker();	
+	// loader.changeMarker();
+	loader.nixeDone();
 
 	// Scrollspy
 	scrollspy.init();
